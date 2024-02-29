@@ -50,9 +50,9 @@ def start_game():
 def common_room():
     clear_screen()
     decision = input("You made your way back to the Common Room. Would you like to go to the Living room or the Main hall? (Main Hall / Living Room) \n").lower()
-    if decision == "Main Hall":
+    if decision == "main hall":
         main_hall()
-    elif decision == "Living Room":
+    elif decision == "living room":
         living_room()
     else:
         print("Invalid input - You must choose between the main hall or the living room (Type main hall or living room into terminal)")
@@ -89,12 +89,15 @@ def main_hall():
 #Living room
 def living_room():
     clear_screen()
-    print("You make your way to the living room and see Dr.Mengeles wife. She looks like as if nothing has happened but she was startled by my arrival./n 'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'")
-    decision = input("Do you want to ask Ms.Mengele about the suspects or ask her why she seems to calm? \n (Type suspects or calm)" )
+    print("You make your way to the living room and see Dr.Mengeles wife. She looks like as if nothing has happened but she was startled by my arrival.\n 'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'")
+    decision = input("Do you want to ask Ms.Mengele about the suspects or ask her why she seems to calm? \n (Type suspects or calm) \n" )
     if decision == "suspects":
         print("You: So Ms.Mengele can you tell me a bit about the suspects \n Ms.Mengele: um Yes Dectetive of course. Well first of all the four suspects are named Tom, Alice, Nicki, and Josh. All pateints here in Hollow Halls. Let me start with Tom, Tom is one of our disbaled pateints here, he is in a wheelchair - he got paralysed from the waist down when he was serving in the war. \n Then we have Alice, poor Alice. I wouldnt believe everything she says she can be a bit out of it most of the times if you know what I mean. She has a history of drug abuse, she is also best of friends with Josh they never leave eachothers sides they share a bedroom down the hall. \n Nicki then is what suprised me the most she is quite and calm but you know detective sometimes the quite ones can do the most harm.\n Lastly, we have Josh. Best friends with Alice. Josh is am ... mute. Ya, Josh can not speak unfortuneatly. Not much else to say about that.. uh ya. \n You: All interesting points there let me write them down.")
-        suspects.append("Tom: Wheelchair bound - interesting that the murder looked like it wanted to be framed from someone pushing someone down the stairs... Obviously Tom could not have got up the stairs. \n Alice: Alice drug addict not fully there from what Ms.Mengele said. \n Nicki: The most suprised suspect, very quiet. \n Josh: Room mates and best friend with Alice down the hall. Mute can not speak.")
+        suspects.append("Tom: Wheelchair bound - interesting that the murder looked like it wanted to be framed from someone pushing someone down the stairs... Obviously Tom could not have got up the stairs. --- Alice: Alice drug addict not fully there from what Ms.Mengele said. --- Nicki: The most suprised suspect, very quiet. --- Josh: Room mates and best friend with Alice down the hall. Mute can not speak.")
         print(f"Suspect notes: {suspects}")
+    else:
+        print("Invalid input please type in suspects or calm")
+        
 
 
 
