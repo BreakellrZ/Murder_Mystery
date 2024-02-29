@@ -10,6 +10,9 @@ riddle = []
 # notes
 notes = []
 
+# Notes on suspects
+suspects = []
+
 
 # Clear the screen in a cross-platform manner
 def clear_screen():
@@ -34,7 +37,6 @@ def start_game():
     clear_screen()
     name = input("Please enter your Surname: ").capitalize()
     print(f"Hello Detective.{name}. Welcome to Hollow Halls Private Psychiatric Facility. I see you have arrived earlier then expected, I was just out for a run, please ignore the sweat and heavy breathing haha, I was just about to hop in to the shower. My name is Dr.Mengele, I am head Psychiatist here at Hollow Halls for over 40 years. Thank you for coming, we are happy to have you here. My wife Lauren found the body, full of blood in the main hall just under the stairs. It is a horrible site to see, she is in shock from it, the poor thing, as am I. Lauren said she saw four suspects running away from the scene, she ran after them and saw the suspects make their way down to the cellar and into the testing labs. By the looks of it they were trying to hide or escape the scene and found themselves locked in the room. The suspects triggered the defense alarm and locked the doors from the inside as they did not put in the correct code to turn of the alarm when they ran into the testing labs. I am honestly not sure what the code is to stop the alarms and re-open the doors. Dr.Robertson is away on holidays and wont be back until tomorrow he is head of the testing labs. You might have to come back Tomorrow to talk with the suspects but until then you are free too search the Facility we are in the common room currently, hopefully you find some clues and can catch the killer and arrest them when Dr.Robertson comes back.")
-    
     decision = input("Ok, time to exlore this facility and see what I can find. \n Do you want to go to the main hall or the living room? (type main hall or living room) \n").lower()
     if decision == "main hall":
         main_hall()
@@ -87,7 +89,14 @@ def main_hall():
 #Living room
 def living_room():
     clear_screen()
-    print("hi")
+    print("You make your way to the living room and see Dr.Mengeles wife. She looks like as if nothing has happened but she was startled by my arrival./n 'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'")
+    decision = input("Do you want to ask Ms.Mengele about the suspects or ask her why she seems to calm? \n (Type suspects or calm)" )
+    if decision == "suspects":
+        print("You: So Ms.Mengele can you tell me a bit about the suspects \n Ms.Mengele: um Yes Dectetive of course. Well first of all the four suspects are named Tom, Alice, Nicki, and Josh. All pateints here in Hollow Halls. Let me start with Tom, Tom is one of our disbaled pateints here, he is in a wheelchair - he got paralysed from the waist down when he was serving in the war. \n Then we have Alice, poor Alice. I wouldnt believe everything she says she can be a bit out of it most of the times if you know what I mean. She has a history of drug abuse, she is also best of friends with Josh they never leave eachothers sides they share a bedroom down the hall. \n Nicki then is what suprised me the most she is quite and calm but you know detective sometimes the quite ones can do the most harm.\n Lastly, we have Josh. Best friends with Alice. Josh is am ... mute. Ya, Josh can not speak unfortuneatly. Not much else to say about that.. uh ya. \n You: All interesting points there let me write them down.")
+        suspects.append("Tom: Wheelchair bound - interesting that the murder looked like it wanted to be framed from someone pushing someone down the stairs... Obviously Tom could not have got up the stairs. \n Alice: Alice drug addict not fully there from what Ms.Mengele said. \n Nicki: The most suprised suspect, very quiet. \n Josh: Room mates and best friend with Alice down the hall. Mute can not speak.")
+        print(f"Suspect notes: {suspects}")
+
+
 
 
 # Bedroom
@@ -97,8 +106,8 @@ def bedroom():
     inventory.append("Knife")
     decision = input("The bathroom door seens to be open in this bedroom, Do you want to have a look in there or do you want to make your way back to the common room? (Bathroom / Common Room)").lower()
     if decision == "bathroom":
-        print("Medicine cabnit looks empty, looks nice and clean... uhh jesus there looks like there is some drops of blood in the sink.. this must be where the killer sleeps this must be the killer.. I must ask to see who's room this is! It looks like they were in a rush and did not clean properly - Ok lets make my way back downstairs and into the common room to re-asses.")
-        notes.append(" -Notes about the bathroom/bedroom: Drops of Blood in sink - killer in a rush - Who's Bedroom is that?")
+        print("Medicine cabnit looks empty, looks nice and clean... what is that? Oh wow a sobriety medal of looks like someone is three years drug and alcohol free that is amazing! Anyways..  uhh jesus there looks like there is some drops of blood in the sink.. this must be where the killer sleeps this must be the killer.. I must ask to see who's room this is! It looks like they were in a rush and did not clean properly - Ok lets make my way back downstairs and into the common room to re-asses.")
+        notes.append(" -Notes about the bathroom/bedroom: Drops of Blood in sink - killer in a rush - Who's Bedroom is that? Sobriety medal.")
         print(notes)
         home = input("Time to make my way back to the Common Room (Type Common Room to get there) \n")
         if home == "common room":
