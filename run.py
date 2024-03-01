@@ -21,20 +21,25 @@ clear_screen()
 
 # Main Menu / Start screen function
 def main_menu():
-    clear_screen()
-    print("Hello, Welcome to Hollow Halls Murder Mystery Game. \n")
-    start = input("Type 1: - Start Game \n Type 2: - View Instuctions \n Type 3: - Quit \n").lower()
-    if start == "1":
-        start_game()   
-    elif start == "2":
-        instructions()
-    elif start == "3": 
-        quit()
-    else:
-        print("Invalid input - You must enter 1 to start the game or 2 to view instuctions")
-        main_menu()
+    while True:
+        print("Hello, Welcome to Hollow Halls Murder Mystery Game. \n")
+        start = input("Type 1: - Start Game \n Type 2: - View Instuctions \n Type 3: - Quit \n").lower()
+        if start == "1":
+            clear_screen()
+            start_game()  
+            break 
+        elif start == "2":
+            clear_screen()
+            instructions()
+            break
+        elif start == "3": 
+            quit()
+        else:
+            clear_screen()
+            print("Invalid input - You must enter 1 to start the game or 2 to view instuctions \n")
+            
         
-        
+
 # Start Game Function 
 def start_game():
     clear_screen()
