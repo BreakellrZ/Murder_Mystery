@@ -19,6 +19,13 @@ def clear_screen():
 
 clear_screen()
 
+def clues():
+        print(f"\nInventory : {inventory}\n")
+        print(f"\nRiddle: {riddle}\n")
+        print(f"Notes: {notes}")
+        print("---"*20)
+        
+
 # Main Menu / Start screen function
 def main_menu():
     while True:
@@ -41,9 +48,10 @@ def main_menu():
 # Start Game Function 
 def start_game():
     clear_screen()
-    name = input("Please enter your Surname: ").capitalize()
+    name = input("\nPlease enter your Surname: \n").capitalize()
     clear_screen()
     while True:
+        clues()
         print(f"""Hello Detective.{name}, Welcome to Hollow Halls Private Psychiatric Facility.
 
 I see you have arrived earlier then expected, I was just out for a run,
@@ -65,42 +73,49 @@ You might have to come back Tomorrow to talk with the suspects,
 but until then you are free too search the Facility we are in the common room currently,
 hopefully you find some clues and can catch the killer and arrest them when Dr.Robertson comes back.
 """)
-        decision = input("""\nOk, time to exlore this facility and see what I can find.\n
-Do you want to go to the main hall or the living room?
-(type main hall or living room) \n""").lower()
+        decision = input("""\nOk, time to explore this facility and see what I can find.\n
+Do you want to go to the Main hall / the Living Room or the Testing Labs? \n
+(Type main hall or living room or testing labs) \n""").lower()
         if decision == "main hall":
             main_hall()
             break
         elif decision == "living room":
             living_room()
             break
+        elif decision == "testing labs":
+            testing_labs()
+            break
         elif decision == "quit": 
             quit()
         else:
             clear_screen()
-            print("""Invalid input - You must choose between the main hall or the living room.\n
-            (Type main hall or living room into terminal) \n""")
+            print("""Invalid input - You must choose between the main hall or the living room or testing labs.\n
+(Type main hall or living room or testing labs into terminal) \n""")
             
 
 # Common Room function
 def common_room():
     clear_screen()
     while True:
+        clues()
         decision = input("""You made your way back to the Common Room. \n
-Would you like to go to the Living room or the Main hall?
-(Main Hall / Living Room) \n""").lower()
+Would you like to go to the Living room / the Main hall \ the Testing Labs?
+(Type Main Hall or Living Room or Testing Labs) \n""").lower()
         if decision == "main hall":
             main_hall()
             break
         elif decision == "living room":
             living_room()
             break
+        elif decision == "testing labs":
+            testing_labs()
+            break
         elif decision == "quit": 
             quit()
         else:
             clear_screen()
-            print("""Invalid input - You must choose between the main hall or the living room.
-(Type main hall or living room into terminal) \n""")
+            print("""Invalid input - You must choose between the main hall or the living room or testing labs.
+(Type main hall or living room or testing labs into terminal) \n""")
         
 
 # Instructions function
@@ -108,9 +123,11 @@ def instructions():
     print("instructions")
 
 
+# Main hall function
 def main_hall():
     clear_screen()
     while True:
+        clues()
         print("""You have arrived in the main hall and see the body...
 hmm...
 it is at the bottom of the stairs..
@@ -120,6 +137,9 @@ I should take a closer look at the body to see if I can find any clues \n""")
 \n(Type 'body' or 'bedroom') \n""").lower()
         if decision == "body":
             clear_screen()
+            inventory.append("Grey hair, Glasses, Tube")
+            notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
+            clues()
             print("""Oh wow.. it does not appear that the victim was pushed down the stairs,
 rather it looks like they have been STABBED in the back.
 Maybe one of the suspects is trying to frame someone else?
@@ -128,10 +148,6 @@ or was pushed down the stairs.
 Oh look a grey hair, must have been his last bit of hair on his bald head poor guy.
 He has a set of glasses in his pocket and some sort of tube.
 I should write this down in my notes and keep these items \n""")
-            notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
-            inventory.append("Grey hair, Glasses, Tube")
-            print(f"\nNotes: {notes}")
-            print(f"\nInventory: {inventory}")
             while True:
                 decision2 = input("""Would you like to make your way to the bedrooms upstairs,
 or back to the common room?
@@ -142,10 +158,11 @@ or back to the common room?
                 elif decision2 == "common room":
                     common_room()
                     break
-                elif decision == "quit": 
+                elif decision2 == "quit": 
                     quit()
                 else: 
                     clear_screen()
+                    clues()
                     print("Invalid input - please type 'bedroom' or 'common room' into the terminal")
         elif decision == "bedroom":
             bedroom()
@@ -157,10 +174,11 @@ or back to the common room?
             print("Invalid input - please type 'body' or 'bedroom' into the terminal")
 
 
-#Living room
+# Living room function
 def living_room():
     clear_screen()
     while True:
+        clues()
         print("""You make your way to the living room and see Dr.Mengeles wife.
 she looks like as if nothing has happened but she was startled by my arrival.
 \n'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'""")
@@ -169,6 +187,7 @@ or go to Dr.Robertson's Room?
 \n(Type suspects or Dr.Robertson) \n""" ).lower()
         if decision == "suspects":
             clear_screen()
+            clues()
             print("""You: So Ms.Mengele can you tell me a bit about the suspects? \n
 Ms.Mengele: um Yes Dectetive of course.
 Well first of all the four suspects are named Tom, Alice, Nicki, and Josh.
@@ -193,9 +212,6 @@ Not much else to say about that.. uh ya.
 
 You: All interesting points there let me write them down.""")
         
-
-            suspects.append("""--- Tom: Wheelchair bound - interesting that the murder looked like it wanted to be framed,from someone pushing someone down the stairs...Obviously Tom could not have got up the stairs. --- Alice: Alice drug addict not fully there from what Ms.Mengele said. --- Nicki: The most suprised suspect,very quiet she is only about 4ft 10 very petite,has OCD, she likes to be very clean. --- Josh: Room mates and best friend with Alice down the hall. Mute can not speak.""")
-            print(f"\n Suspect notes: {suspects}")
             while True:
                 decision2 = input("\nGo to Alice and Joshs room or back to common room \n")
                 if decision2 == "alice and josh":
@@ -208,6 +224,7 @@ You: All interesting points there let me write them down.""")
                     quit()
                 else:
                     clear_screen()
+                    clues()
                     print("Invalid input - You should have typed alice and josh or common room")
         elif decision == "dr.robertson":
             dr_robertson()
@@ -218,16 +235,19 @@ You: All interesting points there let me write them down.""")
             clear_screen()
             print("Invalid input please type in suspects or calm")
 
+
+# Alice and Joshs room function
 def alice_josh():
     clear_screen()
+    inventory.append("straight edge society badge")
     while True:
+        clues()
         print("""\nYou make your way to Alices and Josh's shared room. You Look at Josh's side first.
     Everything looks normal, Josh seems to like his comics, he has a lot of them, nothing out of the ordinary.
 
     You make your way over to Alices side.
     Oh cool, a straight edge society badge. Hmm, that is conflicting from what I have heard. \n
     """)
-        inventory.append("straight edge society badge")
         decision = input("\nLet's go back to the common room to re-asses (Type common room) \n").lower()
         if decision == "common room":
             common_room()
@@ -239,10 +259,12 @@ def alice_josh():
             print("\n Invalid Input - type Common Room \n")
 
     
-
+# Dr.Robertson's Room Function
 def dr_robertson():
     clear_screen()
+    riddle.append("'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'")
     while True:
+        clues()
         print("""You make your way into Dr.Robertson's Room.
 It is a very safisticated looking room, nice and tidy. Lots of graphs on the walls,
 he must live and breathe his work. No posters or pictures of anything,
@@ -256,7 +278,6 @@ I wonder does this riddle lead to anything? I will keep it with me just incase.
 'I am a box who holds keys but not locks.
 With the right combination, I may unlock your soul.
 What am I? \n""")
-        riddle.append("'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'")
         decision = input("""\n Mabye I should go to the testing labs,
 mabye there is something there that this riddle can solve?\n 
 (Type Testing labs or common room)\n""").lower()
@@ -271,11 +292,14 @@ mabye there is something there that this riddle can solve?\n
         else:
             clear_screen()
             print("\ninvalid input, Please type testing labs or common room\n")
-        
-        
+
+
+ # Testing Labs function       
 def testing_labs():
     clear_screen()
+    inventory.append("Ripped piece of clothing, ")
     while True:
+        clues()
         print("""You make your way down into the testing labs. It looks dark and lonely down here.
 I guess not a lot of people come down here bar Dr.Robertson.
 On the ground in front of you, you see some fabric of clothing on the floor,
@@ -286,13 +310,12 @@ Mabye there is something important in there?
 
 To your right you see the doors in which the suspects are locked in. """)
 
-        inventory.append("Ripped piece of clothing, ")
-
         decision = input("""\nDo you want to look at the safe or go to the suspects?\n
 (Type Safe or Suspects)\n""").lower()
 
         if decision == "safe":
             clear_screen()
+            clues()
             print("""\nYou make your way over to the safe.
 This looks tricky... it looks like I need to type in some letters or a word.\n""")
             while True:
@@ -301,16 +324,19 @@ This looks tricky... it looks like I need to type in some letters or a word.\n""
                     print(""" """)
                     inventory.append("Dr.Robertson's Discovery")
                     decision3 = input("""WOW THIS IS IMPORTANT - Time to make my way back to the common room.
-    I need to put all my clues together, I think I know what happened here at Hallow Hall.""")
-                    while True:
-                        if decision3 == "common room":
-                            common_room()
-                            break
-                        elif decision3 == "quit":
-                            quit()
-                        else:
-                            clear_screen()
-                            print("Invalid input - Type common room")
+I need to put all my clues together.
+I think I know what happened here at Hallow Hall, after I come to a conclusion lets go see the suspects.\n
+Type (common room)\n""")
+                    
+                    if decision3 == "common room":
+                        common_room()
+                        break
+                    elif decision3 == "quit":
+                        quit()
+                    else:
+                        clear_screen()
+                        clues()
+                        print("\nInvalid input - Type common room\n")
                 elif decision2 == "quit":
                     quit()
                 else:
@@ -324,24 +350,31 @@ This looks tricky... it looks like I need to type in some letters or a word.\n""
                             quit()
                         else:
                             clear_screen()
-                            print("invalid input - type common room")
+                            clues()
+                            print("\ninvalid input - type common room\n")
 
         elif decision == "suspects":
             suspects()
             break
+        elif decision =="quit":
+            quit()
         else:
             clear_screen()
             print("\ninvalid input - Please type safe or common room\n")
 
                 
-            
+# Suspects Room Function            
 def suspects():
+    clear_screen()
+    clues()
     pass
 
 # Bedroom
 def bedroom():
     clear_screen()
+    inventory.append("Knife")
     while True:
+        clues()
         print("""You make your way up the stairs and search the bedrooms.
 You dont seem to see anything suspicious until finally the last room.
 
@@ -355,13 +388,13 @@ This must be the murder weapon, but the knife looks very clean and has no blood 
 Let's keep this with us and add it to my inventory of items
 - The murderer must be very tall to reach up there.\n""")
         
-        inventory.append("Knife")
-        
         decision = input(""" \n The bathroom door seens to be open in this bedroom,
 Do you want to have a look in there or do you want to make your way back to the common room?\n
 (Bathroom / Common Room) \n""").lower()
         if decision == "bathroom":
             clear_screen()
+            clues()
+            notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? - Sobriety medal.""")
             print("""Medicine cabnit looks empty, looks nice and clean...
 what is that?
 
@@ -370,8 +403,6 @@ This must be where the killer sleeps this must be the killer..
 It looks like they were in a rush and did not clean properly.
 
 - Ok lets make my way back downstairs and into the common room to re-asses. \n""")
-            notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? - Sobriety medal.""")
-            print(f"\nNotes: {notes}")
 
             while True:
                 home = input("\nTime to make my way back to the Common Room (Type Common Room to get there) \n")
