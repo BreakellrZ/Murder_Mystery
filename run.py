@@ -117,7 +117,7 @@ it is at the bottom of the stairs..
 It looks like somebody may have pushed the victim down the stairs?
 I should take a closer look at the body to see if I can find any clues \n""")
         decision = input("""Should I search the body or make my way up to the bedrooms upstairs?
-        \n(Type 'body' or 'bedroom') \n""").lower()
+\n(Type 'body' or 'bedroom') \n""").lower()
         if decision == "body":
             clear_screen()
             print("""Oh wow.. it does not appear that the victim was pushed down the stairs,
@@ -127,11 +127,11 @@ It looks like they were trying to make it seem like the victim fell,
 or was pushed down the stairs.
 Oh look a grey hair, must have been his last bit of hair on his bald head poor guy.
 He has a set of glasses in his pocket and some sort of tube.
-I should write this down in my notes and keep these items""")
+I should write this down in my notes and keep these items \n""")
             notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
             inventory.append("Grey hair, Glasses, Tube")
-            print(f"Notes: {notes}")
-            print(f"Inventory: {inventory}")
+            print(f"\nNotes: {notes}")
+            print(f"\nInventory: {inventory}")
             while True:
                 decision2 = input("""Would you like to make your way to the bedrooms upstairs,
 or back to the common room?
@@ -168,49 +168,62 @@ she looks like as if nothing has happened but she was startled by my arrival.
 or ask her why she seems to calm?
 \n(Type suspects or calm) \n""" ).lower()
         if decision == "suspects":
+            clear_screen()
             print("""You: So Ms.Mengele can you tell me a bit about the suspects? \n
 Ms.Mengele: um Yes Dectetive of course.
 Well first of all the four suspects are named Tom, Alice, Nicki, and Josh.
 All pateints here in Hollow Halls.
 
 Let me start with Tom, Tom is one of our disbaled pateints here, he is in a wheelchair,
-he got paralysed from the waist down when he was serving in the war. \n
+he got paralysed from the waist down when he was serving in the war. 
 
 Then we have Alice, poor Alice. 
 I wouldnt believe everything she says she can be a bit out of it most of the times,
 if you know what I mean.
 She has a history of drug abuse,
 she is also best of friends with Josh they never leave eachothers sides,
-they share a bedroom down the hall. \n
+they share a bedroom down the hall. 
             
 Nicki then is what suprised me the most she is quite and calm,
-but you know detective sometimes the quite ones can do the most harm.\n
+but you know detective sometimes the quite ones can do the most harm.
 
 Lastly, we have Josh. Best friends with Alice.
 Josh is am ... mute. Ya, Josh can not speak unfortuneatly.
-Not much else to say about that.. uh ya. \n
+Not much else to say about that.. uh ya.
 
-You: All interesting points there let me write them down. \n""")
+You: All interesting points there let me write them down.""")
+        
 
-            suspects.append("""--- Tom: Wheelchair bound
-- interesting that the murder looked like it wanted to be framed,
-from someone pushing someone down the stairs...
-Obviously Tom could not have got up the stairs.
-
---- Alice: Alice drug addict not fully there from what Ms.Mengele said.
-            
---- Nicki: The most suprised suspect,
-very quiet she is only about 4ft 10 very petite,
-has OCD, she likes to be very clean.
-
---- Josh: Room mates and best friend with Alice down the hall. Mute can not speak. \n""")
-            print(f"Suspect notes: {suspects}")
+            suspects.append("""--- Tom: Wheelchair bound - interesting that the murder looked like it wanted to be framed,from someone pushing someone down the stairs...Obviously Tom could not have got up the stairs. --- Alice: Alice drug addict not fully there from what Ms.Mengele said. --- Nicki: The most suprised suspect,very quiet she is only about 4ft 10 very petite,has OCD, she likes to be very clean. --- Josh: Room mates and best friend with Alice down the hall. Mute can not speak.""")
+            print(f"\n Suspect notes: {suspects}")
+            while True:
+                decision2 = input("\nGo to Alice and Joshs room or back to common room \n")
+                if decision2 == "alice and josh":
+                    alice_josh()
+                    break
+                elif decision2 == "common room":
+                    common_room()
+                    break
+                elif decision2 == "quit":
+                    quit()
+                else:
+                    clear_screen()
+                    print("Invalid input - You should have typed alice and josh or common room")
+        elif decision == "dr.robertson":
+            dr_robertson()
             break
+        elif decision == "quit":
+            quit()
         else:
             clear_screen()
             print("Invalid input please type in suspects or calm")
-            
 
+def alice_josh():
+    pass
+
+def dr_robertson():
+    pass
+            
 
 # Bedroom
 def bedroom():
@@ -227,10 +240,10 @@ You check and you find a knife - AH HA!!
 This must be the murder weapon, but the knife looks very clean and has no blood on it??
 
 Let's keep this with us and add it to my inventory of items
-- The murderer must be very tall to reach up there.""")
+- The murderer must be very tall to reach up there.\n""")
         inventory.append("Knife")
-        decision = input("""The bathroom door seens to be open in this bedroom,
-Do you want to have a look in there or do you want to make your way back to the common room?
+        decision = input(""" \n The bathroom door seens to be open in this bedroom,
+Do you want to have a look in there or do you want to make your way back to the common room?\n
 (Bathroom / Common Room) \n""").lower()
         if decision == "bathroom":
             clear_screen()
@@ -243,7 +256,7 @@ It looks like they were in a rush and did not clean properly.
 
 - Ok lets make my way back downstairs and into the common room to re-asses. \n""")
             notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? - Sobriety medal.""")
-            print(notes)
+            print(f"\nNotes: {notes}")
             while True:
                 home = input("\nTime to make my way back to the Common Room (Type Common Room to get there) \n")
                 if home == "common room":
