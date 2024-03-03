@@ -19,10 +19,12 @@ def clear_screen():
 
 clear_screen()
 
+
+# Clues
 def clues():
         print(f"\nInventory : {inventory}\n")
         print(f"\nRiddle: {riddle}\n")
-        print(f"Notes: {notes}")
+        print(f"\nNotes: {notes}\n")
         print("---"*20)
         
 
@@ -43,8 +45,7 @@ def main_menu():
             clear_screen()
             print("Invalid input - You must enter 1 to start the game or 2 to view instuctions \n")
             
-        
-
+              
 # Start Game Function 
 def start_game():
     clear_screen()
@@ -317,7 +318,7 @@ Mabye there is something important in there?
 To your right you see the doors in which the suspects are locked in. """)
 
         decision = input("""\nDo you want to look at the safe or go to the suspects?\n
-(Type Safe or Suspects)\n""").lower()
+(Type Safe or Suspects room)\n""").lower()
 
         if decision == "safe":
             clear_screen()
@@ -360,21 +361,50 @@ Type (common room)\n""")
                             clues()
                             print("\ninvalid input - type common room\n")
 
-        elif decision == "suspects":
+        elif decision == "suspects room":
             suspects()
             break
         elif decision =="quit":
             quit()
         else:
             clear_screen()
-            print("\ninvalid input - Please type safe or common room\n")
+            print("\ninvalid input - Please type safe or suspects room\n")
 
                 
 # Suspects Room Function            
 def suspects():
     clear_screen()
-    clues()
-    pass
+    while True:
+        clues()
+        if len(inventory) < 5:
+            print("""I do not think I have searched Hallow Halls enough yet,
+    lets come back later when we have more clues found \n
+    (You Need all 7 items to enter) \n""")
+            decision = input("\nType common room to continue search for clues\n").lower()
+            if decision == "common room":
+                common_room()
+                break
+            elif decision == "quit":
+                quit()
+            else:
+                clear_screen()
+                print("Invalid input - Type common room")
+        else:
+            print(""" """)
+            decision2 = input("""It is time for you to choose WHO WAS THE MURDERER??!! """).lower()
+            if decision2 == "dr.mengele":
+                winner()
+            else:
+                loser()
+                
+
+def winner():
+    clear_screen()
+    print("well done")
+
+def loser():
+    clear_screen()
+    print("ooh noo game over")
 
 # Bedroom
 def bedroom():
