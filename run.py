@@ -137,8 +137,10 @@ I should take a closer look at the body to see if I can find any clues \n""")
 \n(Type 'body' or 'bedroom') \n""").lower()
         if decision == "body":
             clear_screen()
-            inventory.append("Grey hair, Glasses, Tube")
-            notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
+            if "Grey hair, Glasses, Tube" not in inventory:
+                inventory.append("Grey hair, Glasses, Tube")
+            if """Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""" not in notes:
+                notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
             clues()
             print("""Oh wow.. it does not appear that the victim was pushed down the stairs,
 rather it looks like they have been STABBED in the back.
@@ -213,7 +215,8 @@ Not much else to say about that.. uh ya.
 You: All interesting points there let me write them down.""")
         
             while True:
-                decision2 = input("\nGo to Alice and Joshs room or back to common room \n")
+                decision2 = input("""\nGo to Alice and Joshs room or back to common room \n
+(Type Alice and josh or common room\n)""")
                 if decision2 == "alice and josh":
                     alice_josh()
                     break
@@ -239,7 +242,8 @@ You: All interesting points there let me write them down.""")
 # Alice and Joshs room function
 def alice_josh():
     clear_screen()
-    inventory.append("straight edge society badge")
+    if "straight edge society badge" not in inventory:
+        inventory.append("straight edge society badge")
     while True:
         clues()
         print("""\nYou make your way to Alices and Josh's shared room. You Look at Josh's side first.
@@ -262,7 +266,8 @@ def alice_josh():
 # Dr.Robertson's Room Function
 def dr_robertson():
     clear_screen()
-    riddle.append("'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'")
+    if "'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'" not in riddle:
+        riddle.append("'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'")
     while True:
         clues()
         print("""You make your way into Dr.Robertson's Room.
@@ -297,7 +302,8 @@ mabye there is something there that this riddle can solve?\n
  # Testing Labs function       
 def testing_labs():
     clear_screen()
-    inventory.append("Ripped piece of clothing, ")
+    if "Ripped piece of clothing, " not in inventory:
+        inventory.append("Ripped piece of clothing, ")
     while True:
         clues()
         print("""You make your way down into the testing labs. It looks dark and lonely down here.
@@ -322,7 +328,8 @@ This looks tricky... it looks like I need to type in some letters or a word.\n""
                 decision2 = input("""\nInput the word you think is needed to open the safe\n""")
                 if decision2 == "piano":
                     print(""" """)
-                    inventory.append("Dr.Robertson's Discovery")
+                    if "Dr.Robertson's Discovery" not in inventory:
+                        inventory.append("Dr.Robertson's Discovery")
                     decision3 = input("""WOW THIS IS IMPORTANT - Time to make my way back to the common room.
 I need to put all my clues together.
 I think I know what happened here at Hallow Hall, after I come to a conclusion lets go see the suspects.\n
@@ -372,7 +379,8 @@ def suspects():
 # Bedroom
 def bedroom():
     clear_screen()
-    inventory.append("Knife")
+    if "Knife" not in inventory:
+        inventory.append("Knife")
     while True:
         clues()
         print("""You make your way up the stairs and search the bedrooms.
@@ -394,7 +402,8 @@ Do you want to have a look in there or do you want to make your way back to the 
         if decision == "bathroom":
             clear_screen()
             clues()
-            notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? - Sobriety medal.""")
+            if """ - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that?""" not in notes:
+                notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that?""")
             print("""Medicine cabnit looks empty, looks nice and clean...
 what is that?
 
