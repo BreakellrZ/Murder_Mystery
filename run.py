@@ -357,8 +357,9 @@ This looks tricky... it looks like I need to type in a word.\n""")
                 decision2 = input("""\nInput the word you think is needed to open the safe\n""").lower()
                 if decision2 == "piano":
                     print("""\nLooks like a diary, lets take a look.
-'Date march 5th 2024.
-Time of day: 7pm.
+'Date march 5th 2024. \n
+Time of day: 7pm.\n
+
 Today marks the most important day in my life, in fact mabye one of the most important days in human history.
 After years and years of research I have figured out how to stop mental illness. I have found the cure.
 No more will people be plaughed by this horrible illness.
@@ -366,11 +367,11 @@ No more will facilities and big pharma, take everyones money.
 Tomorrow I put an end to millions of peoples suffering,
 I know I might get some back lash from people who profit from mental illness,
 but I hope they can see the bigger picture and realize that this is what is best for the world.
-I am excited to tell the world tomorrow.""")
+I am excited to tell the world tomorrow. \n""")
                     if "Dr.Robertson's Discovery, Spare Key card" not in inventory:
                         inventory.append("Dr.Robertson's Discovery, Spare Key card")
                     while True:
-                        decision3 = input("""WOW THIS IS VERY IMPORTANT - Lots of clues in that diary.
+                        decision3 = input("""\n WOW THIS IS VERY IMPORTANT - Lots of clues in that diary.
 hmm ... some things just dont quite add up ...Time to make my way back to the common room.
 I need to put all my clues together.
 I think I know what happened here at Hallow Hall, after I come to a conclusion lets go see the suspects.\n
