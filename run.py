@@ -53,26 +53,35 @@ def start_game():
     clear_screen()
     while True:
         clues()
-        print(f"""Hello Detective.{name}, Welcome to Hollow Halls Private Psychiatric Facility.
+        print(f""" Date: 6th of March - Friday
 
-I see you have arrived earlier then expected, I was just out for a run,
-please ignore the sweat and heavy breathing haha, I was just about to hop in to the shower.
-My name is Dr.Mengele, I am head Psychiatist here at Hollow Halls for over 40 years.
-Thank you for coming, we are happy to have you here.
+Hello Detective.{name}, Welcome to Hollow Halls Private Psychiatric Facility.
 
-My wife Lauren found the body, full of blood in the main hall just under the stairs.
-It is a horrible site to see, she is in shock from it, the poor thing, as am I.
-Lauren said she saw four suspects running away from the scene,
-she ran after them and saw the suspects make their way down to the cellar and into the testing labs.
-By the looks of it they were trying to hide or escape the scene and found themselves locked in the room.
-The suspects triggered the defense alarm, and locked the doors from the inside,
-as they did not put in the correct code to turn of the alarm when they ran into the testing labs.
-I am honestly not sure what the code is to stop the alarms and re-open the doors. 
-Dr.Robertson is away on holidays and wont be back until tomorrow he is head of the testing labs.
+I see you have arrived a lot earlier then expected, I was just out for a run,
+please ignore the sweat and heavy breathing haha.
+My name is Dr.Mengele. I am head Psychiatist and Owner of this facility here at Hollow Halls, for over 40 years.
+We house patients under the age of 40 here, and have done so for plenty of years.
+Thank you for coming on such short notice, we are happy to have you here.
 
-You might have to come back Tomorrow to talk with the suspects,
-but until then you are free too search the Facility we are in the common room currently,
-hopefully you find some clues and can catch the killer and arrest them when Dr.Robertson comes back.
+Horrible murder today, the body's face is completely smashed - It would be impossible to ID the person.
+It happened around 1:55pm
+Although, one of our patients is not present in their rooms and we have identified that it must be Mr.Hardy.
+He was a lovely person and we are all deeply saddened and shocked by this incident today.
+We have reached about to his family today, to tell them the news. They never visited him.
+The body is in the main hall, we did not want to move it incase it gives you any clues.
+
+I know you just got here, but this is very important information and I need to share it with you right away.
+I saw four suspects running away from the body down towards the testing facillaties.
+I chased them down to see their faces and they ran into the testing laboratory rooms.
+They were either trying to hide or run away I am not sure, but When they ran into the testing rooms,
+I shut the doors behind them, I guess they did not know that it is a one way door system.
+They can not come back out. All four suspects are locked in their for you. The only problem is,
+I do not run the testing labs I am never down here.
+Dr.Robertson does, and you need a special Key Card to open the doors which only he has. 
+Now, unfortunatly Dr.Robertson is away on Holiday for the past week but he is back tomorrow.
+This will give you a lot of time to be able to put the pieces togehter and hopefully solve this brutal Murder.
+You are free to move around Hallow Halls as much as you want to gather evidence, 
+and come to your conclusion of WHO MURDERED MR.HARDY.
 """)
         decision = input("""\nOk, time to explore this facility and see what I can find.\n
 Do you want to go to the Main hall / the Living Room or the Testing Labs? \n
@@ -131,26 +140,32 @@ def main_hall():
         clues()
         print("""You have arrived in the main hall and see the body...
 hmm...
-it is at the bottom of the stairs..
+The body is at the bottom of the stairs..
 It looks like somebody may have pushed the victim down the stairs?
-I should take a closer look at the body to see if I can find any clues \n""")
+Mabye I should take a closer look at the body to see if I can find any clues \n""")
         decision = input("""Should I search the body or make my way up to the bedrooms upstairs?
 \n(Type 'body' or 'bedroom') \n""").lower()
         if decision == "body":
             clear_screen()
             if "Grey hair, Glasses, Tube" not in inventory:
                 inventory.append("Grey hair, Glasses, Tube")
-            if """Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""" not in notes:
-                notes.append("""Note about the body:Looks like the killer was trying to frame someone by placing the body at the end of the stairs.- Glasses, Grey hair, and tube""")
+            if """Note about the body: Looks like mabye the killer was trying to frame someone by placing the body at the end of the stairs?""" not in notes:
+                notes.append("""Note about the body: Looks like the killer was trying to frame someone by placing the body at the end of the stairs?""")
             clues()
-            print("""Oh wow.. it does not appear that the victim was pushed down the stairs,
-rather it looks like they have been STABBED in the back.
-Maybe one of the suspects is trying to frame someone else?
-It looks like they were trying to make it seem like the victim fell,
-or was pushed down the stairs.
-Oh look a grey hair, must have been his last bit of hair on his bald head poor guy.
-He has a set of glasses in his pocket and some sort of tube.
-I should write this down in my notes and keep these items \n""")
+            print("""You make your way over to the body to take a closer look.
+Oh wow... This body was not pushed down the stairs, rather it WAS STABBED to death.
+There is multiple stab wounds in the victims back.
+
+Hmm.... interesting,
+it looks like the murderer was trying to mabye frame someone by placing the body at the end of the stairs?
+Not a bad idea... Who would want us too think that the body had been pushed down the stairs to its death?
+
+Lets take a look in the victims pockets for any clues, looks like a pair of old glasses and a testing tube?
+His clothes seem ripped too.
+I'm going to keep these items in my bag for now.
+Oh look one last piece of his grey hair, actually it looks like he was bald from what I can make out.
+Mabye I should go upstairs and look around the bedrooms!
+\n""")
             while True:
                 decision2 = input("""Would you like to make your way to the bedrooms upstairs,
 or back to the common room?
@@ -183,37 +198,45 @@ def living_room():
     while True:
         clues()
         print("""You make your way to the living room and see Dr.Mengeles wife.
-she looks like as if nothing has happened but she was startled by my arrival.
-\n'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'""")
+\n You: 'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'
+
+Ms.Mengele: 'Hello Detective, It was not actually me you called it was our maid,
+I sent her home as she was in a lot of shock.
+You are very welcome here at the wealthiest Pyschiatric Facility in Europe.
+Please do ask any questions you may have about the suspects. I do hope Dr.Robertson arrives back tomorrow,
+so you can put away the murderer, bring peace back to Hallow Halls and to Mr.Hardys family.'""")
         decision = input("""Do you want to ask Ms.Mengele about the suspects,
 or go to Dr.Robertson's Room?
 \n(Type suspects or Dr.Robertson) \n""" ).lower()
         if decision == "suspects":
             clear_screen()
             clues()
-            print("""You: So Ms.Mengele can you tell me a bit about the suspects? \n
-Ms.Mengele: um Yes Dectetive of course.
+            print("""You: 'So Ms.Mengele can you tell me a bit about the suspects?'\n
+
+Ms.Mengele: ' um Yes Dectetive of course.
 Well first of all the four suspects are named Tom, Alice, Nicki, and Josh.
 All pateints here in Hollow Halls.
 
 Let me start with Tom, Tom is one of our disbaled pateints here, he is in a wheelchair,
-he got paralysed from the waist down when he was serving in the war. 
+he got paralysed from the waist down when he was serving in the war. He suffers from PTSD and his room is downstairs,
+unfortunatly we have no elevators here yet.
 
 Then we have Alice, poor Alice. 
 I wouldnt believe everything she says she can be a bit out of it most of the times,
 if you know what I mean.
 She has a history of drug abuse,
-she is also best of friends with Josh they never leave eachothers sides,
-they share a bedroom down the hall. 
+she is also best of friends with Josh they never leave eachothers sides.
+They share a bedroom down the hall. 
             
-Nicki then is what suprised me the most she is quite and calm,
-but you know detective sometimes the quite ones can do the most harm.
+Nicki, well suprised me the most she is quite and calm,
+but you know detective sometimes the quite ones can do the most harm, she lives upstairs and has ocd everthing is
+spotless, she is quite small though around 5ft.
 
 Lastly, we have Josh. Best friends with Alice.
-Josh is am ... mute. Ya, Josh can not speak unfortuneatly.
-Not much else to say about that.. uh ya.
+Josh is mute. Josh can not speak unfortuneatly.
+Not much else to say about that... '
 
-You: All interesting points there let me write them down.""")
+You: All interesting points there. I should try and remember this conversation.""")
         
             while True:
                 decision2 = input("""\nGo to Alice and Joshs room or back to common room \n
@@ -245,14 +268,18 @@ def alice_josh():
     clear_screen()
     if "straight edge society badge" not in inventory:
         inventory.append("straight edge society badge")
+    if "Notes about Alice and Josh's room: 'Drawing drawn at 2:15pm murder was at 1:55pm'" not in notes:
+        notes.append("Notes about Alice and Josh's room: 'Drawing drawn at 2:15pm murder was at 1:55pm'")
     while True:
         clues()
         print("""\nYou make your way to Alices and Josh's shared room. You Look at Josh's side first.
-    Everything looks normal, Josh seems to like his comics, he has a lot of them, nothing out of the ordinary.
+Everything looks normal, Josh seems to like his comics, he has a lot of them, nothing out of the ordinary.
+Oh wow amazing, he has drawn the avengers superheros, he is very talented. Drawn at 2:15pm is says on todays date...
+but Dr.Mengele said the murder was at 1:55pm and that they ran straight down to the testing labs?
 
-    You make your way over to Alices side.
-    Oh cool, a straight edge society badge. Hmm, that is conflicting from what I have heard. \n
-    """)
+You make your way over to Alices side.
+A straight edge society badge. Hmm, that is conflicting from what I have heard. \n
+""")
         decision = input("\nLet's go back to the common room to re-asses (Type common room) \n").lower()
         if decision == "common room":
             common_room()
@@ -275,7 +302,7 @@ def dr_robertson():
 It is a very safisticated looking room, nice and tidy. Lots of graphs on the walls,
 he must live and breathe his work. No posters or pictures of anything,
 just an unopened box of contact lenses.
-He must have love his job. I hope he is enjoying his Holiday Break, it looks like he needs it.
+I hope he is enjoying his Holiday Break, it looks like he needs it.
 
 As you search his room for clues you come across a piece of laminated paper in one of his wardrobes.
 It has a picture of a safe on it and a testing tube. Looks to be some sort of riddle on it,
@@ -283,7 +310,7 @@ I wonder does this riddle lead to anything? I will keep it with me just incase.
 
 'I am a box who holds keys but not locks.
 With the right combination, I may unlock your soul.
-What am I? \n""")
+What am I?' \n""")
         decision = input("""\n Mabye I should go to the testing labs,
 mabye there is something there that this riddle can solve?\n 
 (Type Testing labs or common room)\n""").lower()
@@ -310,12 +337,12 @@ def testing_labs():
         print("""You make your way down into the testing labs. It looks dark and lonely down here.
 I guess not a lot of people come down here bar Dr.Robertson.
 On the ground in front of you, you see some fabric of clothing on the floor,
-looks like it has been ripped off? Hmm could be nothing..
+looks like it has been ripped off? Hmm could be nothing...
 
 In the corner of your eye you see what looks like some sort of safe.
 Mabye there is something important in there? 
 
-To your right you see the doors in which the suspects are locked in. """)
+To your right you see the doors in which the suspects are locked in. You need that special key Dr.Robertson has""")
 
         decision = input("""\nDo you want to look at the safe or go to the suspects?\n
 (Type Safe or Suspects room)\n""").lower()
@@ -324,14 +351,25 @@ To your right you see the doors in which the suspects are locked in. """)
             clear_screen()
             clues()
             print("""\nYou make your way over to the safe.
-This looks tricky... it looks like I need to type in some letters or a word.\n""")
+This looks tricky... it looks like I need to type in a word.\n""")
             while True:
                 decision2 = input("""\nInput the word you think is needed to open the safe\n""")
                 if decision2 == "piano":
-                    print(""" """)
-                    if "Dr.Robertson's Discovery" not in inventory:
-                        inventory.append("Dr.Robertson's Discovery")
-                    decision3 = input("""WOW THIS IS IMPORTANT - Time to make my way back to the common room.
+                    print("""Looks like a diary, lets take a look.
+'Date march 5th 2024.
+Time of day: 7pm.
+Today marks the most important day in my life, in fact mabye one of the most important days in human history.
+After years and years of research I have figured out how to stop mental illness. I have found the cure.
+No more will people be plaughed by this horrible illness.
+No more will facilities and big pharma, take everyones money.
+Tomorrow I put an end to millions of peoples suffering,
+I know I might get some back lash from people who profit from mental illness,
+but I hope they can see the bigger picture and realize that this is what is best for the world.
+I am excited to tell the world tomorrow.""")
+                    if "Dr.Robertson's Discovery, Spare Key card" not in inventory:
+                        inventory.append("Dr.Robertson's Discovery, Spare Key card")
+                    decision3 = input("""WOW THIS IS VERY IMPORTANT - Lots of clues in that diary.
+hmm ... some things just dont quite add up ...Time to make my way back to the common room.
 I need to put all my clues together.
 I think I know what happened here at Hallow Hall, after I come to a conclusion lets go see the suspects.\n
 Type (common room)\n""")
@@ -379,7 +417,7 @@ def suspects():
         if len(inventory) < 5:
             print("""I do not think I have searched Hallow Halls enough yet,
     lets come back later when we have more clues found \n
-    (You Need all 7 items to enter) \n""")
+    (You Need all 8 items to enter) \n""")
             decision = input("\nType common room to continue search for clues\n").lower()
             if decision == "common room":
                 common_room()
@@ -390,7 +428,17 @@ def suspects():
                 clear_screen()
                 print("Invalid input - Type common room")
         else:
-            print(""" """)
+            print("""You bring Mr.Mengele down to the suspects room.
+You:'So Mr.Mengele I have some great news, I found Dr.Robertsons special keycard to open the doors.
+Let's get this over with right now, I know who the killer is.'
+
+Dr.Mengele: 'Oh are you sure? are you positive you dont want to wait the night and sleep on it?'
+
+You: 'No I am 100% positive on who the killer is - before we go in their let me explain my reasoning to you...'
+
+After explaining everything to Dr.Mengele. You make your way into the suspects room.
+All four suspects look heavily sedated and dazed... as expected... 
+""")
             decision2 = input("""It is time for you to choose WHO WAS THE MURDERER??!! """).lower()
             if decision2 == "dr.mengele":
                 winner()
@@ -416,14 +464,13 @@ def bedroom():
         print("""You make your way up the stairs and search the bedrooms.
 You dont seem to see anything suspicious until finally the last room.
 
-In the last room as you are looking through the drawers,
-You find nothing, 
-until you see something shiny at the very top of the wardrobe,
+In the last room as you are looking,
+you see something shiny at the very top of the wardrobe,
 stashed away in the far corner.
 You check and you find a knife - AH HA!!
 This must be the murder weapon, but the knife looks very clean and has no blood on it??
 
-Let's keep this with us and add it to my inventory of items
+Let's keep this with us.
 - The murderer must be very tall to reach up there.\n""")
         
         decision = input(""" \n The bathroom door seens to be open in this bedroom,
@@ -432,9 +479,9 @@ Do you want to have a look in there or do you want to make your way back to the 
         if decision == "bathroom":
             clear_screen()
             clues()
-            if """ - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that?""" not in notes:
-                notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that?""")
-            print("""Medicine cabnit looks empty, looks nice and clean...
+            if """ - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? Must be very tall""" not in notes:
+                notes.append(""" - Notes about the bathroom/bedroom:- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? Must be very tall""")
+            print("""Medicine cabnit looks empty, nice and clean...
 what is that?
 
 Oh wow, uhh jesus there looks like there is some drops of blood in the sink..
