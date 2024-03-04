@@ -16,6 +16,7 @@ suspects = []
 # Clear the screen in a cross-platform manner
 def clear_screen():
   os.system('cls' if os.name == 'nt' else 'clear')
+  print("\033c", end="")
 
 clear_screen()
 
