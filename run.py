@@ -441,7 +441,7 @@ You: 'No I am 100% positive on who the killer is - before we go in their let me 
 After explaining everything to Dr.Mengele. You make your way into the suspects room.
 All four suspects look heavily sedated and dazed... as expected... 
 """)
-            decision2 = input("""It is time for you to choose WHO WAS THE MURDERER??!! """).lower()
+            decision2 = input(""" \nIt is time for you to choose WHO WAS THE MURDERER??!! \n""").lower()
             if decision2 == "dr.mengele":
                 winner()
             else:
