@@ -494,12 +494,12 @@ def dr_robertson():
               "\n"
               "'I am a box who holds keys but not locks.\n"
               "With the right combination, I may unlock your soul.\n"
-              "What am I?'"
+              "What am I?' \n"
               )
-        decision = input("""\n
-                        Mabye I should go to the testing labs,
-                        mabye there is something there that this riddle can solve?\n 
-                        (Type Testing labs or common room)\n""").lower()
+        decision = input("Mabye I should go to the testing labs, "
+                         "mabye there is something there that this riddle can solve?\n "
+                         "(Type Testing labs or common room)\n"
+                         ).lower()
 
         if decision == "testing labs":
             testing_labs()
@@ -511,9 +511,8 @@ def dr_robertson():
             quit()
         else:
             clear_screen()
-            print("""\n
-                Invalid input -
-                Please type testing labs or common room\n""")
+            print("Invalid input - \n"
+                  "Please type testing labs or common room\n")
             time.sleep(4)
 
 
@@ -525,65 +524,75 @@ def testing_labs():
 
     while True:
         clues()
-        print("""
-            You make your way down into the testing labs. It looks dark and lonely down here.
-            I guess not a lot of people come down here bar Dr.Robertson.
-            On the ground in front of you, you see some fabric of clothing on the floor,
-            looks like it has been ripped off? Hmm could be nothing...
+        print("You make your way down into the testing labs.\n"
+              "It looks dark and lonely down here.\n"
+              "I guess not a lot of people come down here bar Dr.Robertson.\n"
+              "On the ground in front of you, " 
+              "you see some fabric of clothing on the floor, "
+              "looks like it has been ripped off? "
+              "Hmm could be nothing...\n"
+              "\n"
+              "In the corner of your eye " 
+              "you see what looks like some sort of safe.\n"
+              "Mabye there is something important in there? \n"
+              "\n"
+              "To your right you see the doors "
+              "in which the suspects are locked in.\n"
+              "you need that special key Dr.Robertson has\n"
+              )
 
-            In the corner of your eye you see what looks like some sort of safe.
-            Mabye there is something important in there? 
-
-            To your right you see the doors in which the suspects are locked in.
-            ou need that special key Dr.Robertson has""")
-
-        decision = input("""\n
-                        Do you want to look at the safe or go to the suspects?\n
-                        (Type Safe or Suspects room)\n
-                        """).lower()
+        decision = input("\nDo you want to look at the safe or go to the suspects?\n"
+                         "(Type Safe or Suspects room)\n"
+                        ).lower()
 
         if decision == "safe":
             clear_screen()
             clues()
-            print("""\n
-                You make your way over to the safe.
-                This looks tricky... it looks like I need to type in a word.\n""")
+            print("You make your way over to the safe.\n"
+                  "This looks tricky... it looks like I need to type in a word.\n")
 
             while True:
-                decision2 = input("""\n
-                                Input the word you think is needed to open the safe
-                                \n""").lower()
+                decision2 = input("\nInput the word you think is needed to open the safe"
+                                 ).lower()
 
                 if decision2 == "piano":
-                    print("""\n
-                        Looks like a diary, lets take a look.
-                        'Date march 5th 2024. \n
-                        Time of day: 7pm.\n
+                    print("\nLooks like a diary, lets take a look."
+                        "'Date march 5th 2024.\n"
+                        "Time of day: 7pm.\n"
 
-                        Today marks the most important day in my life,
-                        in fact mabye one of the most important days in human history.
-                        After years and years of research I have figured out how to stop mental illness.
-                        I have found the cure.
-                            
-                        No more will people be plaughed by this horrible illness.
-                        No more will facilities and big pharma, take everyones money.
-                        Tomorrow I put an end to millions of peoples suffering,
-                        I know I might get some back lash from people who profit from mental illness,
-                        but I hope they can see the bigger picture
-                        and realize that this is what is best for the world.
-                        I am excited to tell the world tomorrow. \n""")
+                        "Today marks the most important day in my life, "
+                        "in fact mabye one of the most important days in human history.\n"
+                        "After years and years of research "
+                        "I have figured out how to stop mental illness.\n"
+                        "I have found the cure.\n"
+                        "\n"
+                        "No more will people be plaughed by this horrible illness.\n"
+                        "No more will facilities and big pharma, take everyones money.\n"
+                        "Tomorrow I put an end to millions of peoples suffering, "
+                        "I know I might get some back lash from people "
+                        "who profit from mental illness, "
+                        "but I hope they can see the bigger picture "
+                        "and realize that this is what is best for the world.\n"
+                        "I am excited to tell the world tomorrow. \n"
+                        )
 
                     if "Dr.Robertson's Discovery, Spare Key card" not in inventory:
                         inventory.append("Dr.Robertson's Discovery, Spare Key card")
 
                     while True:
-                        decision3 = input("""\n
-                                        WOW THIS IS VERY IMPORTANT - Lots of clues in that diary.
-                                        hmm ... some things just dont quite add up ... 
-                                        Time to make my way back to the common room.
-                                        I need to put all my clues together.
-                                        I think I know what happened here at Hallow Hall, after I come to a conclusion lets go see the suspects.\n
-                                        Type (common room)\n""").lower()
+                        decision3 = input("\nWOW THIS IS VERY IMPORTANT -\n"
+                                    "Lots of clues in that diary.\n"
+                                    "hmm ... \n"
+                                    "some things just dont quite add up...\n"
+                                    "Time to make my way back to the "
+                                    "common room.\n"
+                                    "I need to put all my clues together.\n"
+                                    "I think I know what happened here "
+                                    "at Hallow Hall, "
+                                    "after I come to a conclusion "
+                                    "lets go see the suspects.\n"
+                                    "Type (common room)\n"
+                                    ).lower()
 
                         if decision3 == "common room":
                             common_room()
@@ -593,22 +602,21 @@ def testing_labs():
                         else:
                             clear_screen()
                             clues()
-                        print("""\n
-                            Invalid input -
-                            Type common room\n""")
+                        print("\nInvalid input -\n "
+                              "Type common room\n")
                         time.sleep(4)
                 elif decision2 == "quit":
                     quit()
                 else:
 
                     while True:
-                        print("""
-                            Damn,
-                            looks like I got it wrong,
-                            mabye I can find a clue for this somewhere \n""")
-                        wrong = input("""\n
-                                    Type common room to go back and search for more clues\n
-                                    """).lower()
+                        print("Damn, "
+                              "looks like I got it wrong, "
+                              "mabye I can find a clue for this somewhere\n"
+                              )
+                        wrong = input("\nType common room to go back "
+                                      "and search for more clues\n"
+                                     ).lower()
 
                         if wrong == "common room":
                             common_room()
@@ -618,9 +626,9 @@ def testing_labs():
                         else:
                             clear_screen()
                             clues()
-                            print("""\n
-                                Invalid input - 
-                                Type common room\n""")
+                            print("\nInvalid input - \n"
+                                "Type common room\n"
+                                )
                             time.sleep(4)
 
         elif decision == "suspects room":
@@ -630,9 +638,9 @@ def testing_labs():
             quit()
         else:
             clear_screen()
-            print("""\n
-                  Invalid input - 
-                  Please type safe or suspects room\n""")
+            print("Invalid input - \n"
+                  "Please type safe or suspects room\n"
+                  )
             time.sleep(4)
 
 
@@ -643,11 +651,12 @@ def suspects():
     while True:
         clues()
         if len(inventory) < 5:
-            print("""
-                I do not think I have searched Hallow Halls enough yet,
-                lets come back later when we have more clues found \n
-                (You Need all 8 items to enter) \n""")
-            decision = input("\nType common room to continue search for clues\n").lower()
+            print("I do not think I have searched Hallow Halls enough yet,"
+                  " lets come back later when we have more clues found \n"
+                  "(You Need all 8 items to enter) \n")
+            decision = input("\nType common room"
+                             "to continue search for clues\n"
+                             ).lower()
 
             if decision == "common room":
                 common_room()
@@ -659,20 +668,29 @@ def suspects():
                 print("Invalid input - Type common room")
                 time.sleep(4)
         else:
-            print("""
-                You bring Mr.Mengele down to the suspects room.
-                You:'So Mr.Mengele I have some great news, I found Dr.Robertsons special keycard to open the doors.
-                Let's get this over with right now, I know who the killer is.'
-
-                Dr.Mengele: 'Oh are you sure? are you positive you dont want to wait the night and sleep on it?'
-
-                You: 'No I am 100% positive on who the killer is - before we go in their let me explain my reasoning to you...'
-
-                After explaining everything to Dr.Mengele. You make your way into the suspects room.
-                All four suspects look heavily sedated and dazed... as expected... 
-                """)
-            decision2 = input("""\n
-                             It is time for you to choose WHO WAS THE MURDERER??!! \n""").lower()
+            print("You bring Mr.Mengele down to the suspects room.\n"
+                  "You:'So Mr.Mengele I have some great news, "
+                  "I found Dr.Robertsons special keycard"
+                  "to open the doors.\n"
+                  "Let's get this over with right now, "
+                  "'I know who the killer is.\n'"
+                  "\n"
+                  "Dr.Mengele: 'Oh are you sure? "
+                  "are you positive you dont want to wait the night "
+                  "and sleep on it?'\n"
+                  "\n"
+                  "You: 'No I am 100% positive on who the killer is "
+                  "- before we go in their let me explain my reasoning"
+                  "to you...'\n"
+                  "\n"
+                  "After explaining everything to Dr.Mengele. \n"
+                  "You make your way into the suspects room.\n"
+                  "All four suspects look heavily sedated and dazed... "
+                  "as expected... \n"
+                )
+            decision2 = input("\nIt is time for you to choose "
+                              "WHO WAS THE MURDERER??!!\n"
+                              ).lower()
 
             if decision2 == "dr.mengele":
                 winner()
