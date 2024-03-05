@@ -1,4 +1,4 @@
-import os
+import os 
 import time
 
 # Inventory for items picked up in the game
@@ -268,11 +268,11 @@ def main_hall():
                 )
 
             while True:
-                decision2 = input("""
-                                Would you like to make your way to the bedrooms upstairs,
-                                or back to the common room? \n
-                                (Type 'bedroom' or 'common room') \n 
-                                """).lower()
+                decision2 = input("Would you like to make your way to "
+                                 "the bedrooms upstairs, "
+                                 "or back to the common room? \n"
+                                 "(Type 'bedroom' or 'common room') \n" 
+                                 ).lower()
 
                 if decision2 == "bedroom":
                     bedroom()
@@ -285,8 +285,9 @@ def main_hall():
                 else:
                     clear_screen()
                     clues()
-                    print("Invalid input - \n" 
-                    "please type 'bedroom' or 'common room' into the terminal \n")
+                    print("Invalid input - \n"
+                    "please type 'bedroom' or 'common room'"
+                    "into the terminal\n")
                     time.sleep(4)
 
         elif decision == "bedroom":
@@ -296,77 +297,88 @@ def main_hall():
             quit()
         else:
             clear_screen()
-            print("""\n
-                Invalid input -
-                please type 'body' or 'bedroom' into the terminal""")
+            print("\n"
+                "Invalid input -"
+                "please type 'body' or 'bedroom' into the terminal")
             time.sleep(4)
 
 
 # Living room function
 def living_room():
+    """
+    Living room function. Here you talk to Mr.Mengels wife and 
+    can ask her about the suspects or go to Dr.Robertsons room.
+    """
     clear_screen()
 
     while True:
         clues()
-        print("""
-            You make your way to the living room and see Dr.Mengeles wife.\n
-            You: 'Hello Ms.Mengele, I am the detetive you called. It is a pleasure to meet you.'
-
-            Ms.Mengele: 'Hello Detective, It was not actually me you called it was our maid,
-            I sent her home as she was in a lot of shock.
-                
-            You are very welcome here at the wealthiest Pyschiatric Facility in Europe.
-            Please do ask any questions you may have about the suspects.
-            I do hope Dr.Robertson arrives back tomorrow,
-            so you can put away the murderer,
-            bring peace back to Hallow Halls and to Mr.Hardys family.\n'""")
-        decision = input("""\n
-                        Do you want to ask Ms.Mengele about the suspects,
-                        or go to Dr.Robertson's Room?\n
-                        (Type suspects or Dr.Robertson) \n
-                        """ ).lower()
+        print("You make your way to the living room and see Dr.Mengeles wife.\n"
+              "\n"
+              "You: 'Hello Ms.Mengele, I am the detetive you called. "
+              "It is a pleasure to meet you.'"
+              "\n"
+              "Ms.Mengele: 'Hello Detective, "
+              "It was not actually me you called it was our maid, "
+              "I sent her home as she was in a lot of shock."
+              "\n"
+              "You are very welcome here " 
+              "at the wealthiest Pyschiatric Facility in Europe.\n"
+              "Please do ask any questions you may have about the suspects.\n"
+              "I do hope Dr.Robertson arrives back tomorrow, "
+              "so you can put away the murderer, "
+              "bring peace back to Hallow Halls and to Mr.Hardys family.\n'"
+              )
+        decision = input("\n"
+                         "Do you want to ask Ms.Mengele about the suspects, "
+                         "or go to Dr.Robertson's Room?\n"
+                         "(Type suspects or Dr.Robertson) \n"
+                         ).lower()
 
         if decision == "suspects":
             clear_screen()
             clues()
-            print("""\n
-                You: 'So Ms.Mengele can you tell me a bit about the suspects?'\n
-
-                Ms.Mengele: ' um Yes Dectetive of course.
-                Well first of all the four suspects are named Tom, Alice, Nicki, and Josh.
-                All pateints here in Hollow Halls.
-
-                Let me start with Tom,
-                Tom is one of our disbaled pateints here, he is in a wheelchair,
-                he got paralysed from the waist down when he was serving in the war.
-                He suffers from PTSD and his room is downstairs,
-                unfortunatly we have no elevators here yet.
-
-                Then we have Alice, poor Alice. 
-                I wouldnt believe everything she says she can be a bit out of it most of the times,
-                if you know what I mean.
-                She has a history of drug abuse,
-                she is also best of friends with Josh they never leave eachothers sides.
-                They share a bedroom down the hall. 
-                She also had beef with Mr.Hardy!!
-                            
-                Nicki, well suprised me the most she is quite and calm,
-                but you know detective sometimes the quite ones can do the most harm,
-                she lives upstairs and has ocd everthing is
-                spotless, she is quite small though around 5ft.
-
-                Lastly, we have Josh. Best friends with Alice.
-                Josh is mute. Josh can not speak unfortuneatly.
-                Not much else to say about that... '
-
-                You: All interesting points there.
-                I should try and remember this conversation.""")
+            print("You: 'So Ms.Mengele can you tell me a bit about the suspects?'\n"
+                  "\n"
+                  "Ms.Mengele: ' um Yes Dectetive of course.\n"
+                  "Well first of all the four suspects are "
+                  "named Tom, Alice, Nicki, and Josh.\n"
+                  "All pateints here in Hollow Halls. \n"
+                  "\n"
+                  "Let me start with Tom, "
+                  "Tom is one of our disbaled pateints here, he is in a wheelchair, "
+                  "he got paralysed from the waist down "
+                  "when he was serving in the war.\n"
+                  "He suffers from PTSD and his room is downstairs, "
+                  "unfortunatly we have no elevators here yet.\n"
+                  "\n"
+                  "Then we have Alice, poor Alice.\n" 
+                  "I wouldnt believe everything she says "
+                  "she can be a bit out of it most of the times, "
+                  "if you know what I mean.\n"
+                  "She has a history of drug abuse, "
+                  "she is also best of friends with Josh "
+                  "they never leave eachothers sides.\n"
+                  "They share a bedroom down the hall.\n" 
+                  "She also had beef with Mr.Hardy!!"
+                  "\n"
+                  "Nicki, well suprised me the most she is quite and calm, "
+                  "but you know detective sometimes the quite ones"
+                  "can do the most harm, "
+                  "she lives upstairs and has ocd everthing is "
+                  "spotless, she is quite small though around 5ft. \n"
+                  "\n"
+                  "Lastly, we have Josh. Best friends with Alice. \n"
+                  "Josh is mute. Josh can not speak unfortuneatly. \n"
+                  "Not much else to say about that... \n'"
+                  "\n"
+                  "You: All interesting points there.\n"
+                  "I should try and remember this conversation.\n")
 
             while True:
-                decision2 = input("""\n
-                                Go to Alice and Joshs room or back to common room \n
-                                (Type Alice and josh or common room) \n
-                                """).lower()
+                decision2 = input("Go to Alice and Joshs room or back to common room \n"
+                                 "(Type Alice and josh or common room) \n"
+                                 ).lower()
 
                 if decision2 == "alice and josh":
                     alice_josh()
@@ -379,9 +391,8 @@ def living_room():
                 else:
                     clear_screen()
                     clues()
-                    print("""\n
-                        Invalid input -
-                        You should have typed alice and josh or common room\n""")
+                    print("Invalid input - \n"
+                          "You should have typed alice and josh or common room\n")
                     time.sleep(4)
 
         elif decision == "dr.robertson":
@@ -391,14 +402,17 @@ def living_room():
             quit()
         else:
             clear_screen()
-            print("""\n
-                Invalid input -
-                please type in suspects or calm\n""")
+            print("Invalid input - \n"
+                  "please type in suspects or calm\n")
             time.sleep(4)
 
 
 # Alice and Joshs room function
 def alice_josh():
+    """
+    Alice and Joshs room - adds straight edge society badge to inventory.
+    Back to the common room after.
+    """
     clear_screen()
     if "straight edge society badge" not in inventory:
         inventory.append("straight edge society badge")
@@ -410,19 +424,26 @@ def alice_josh():
 
     while True:
         clues()
-        print("""\n
-            You make your way to Alices and Josh's shared room. You Look at Josh's side first.
-            Everything looks normal, Josh seems to like his comics, he has a lot of them, nothing out of the ordinary.
-            Oh wow amazing, he has drawn the avengers superheros, he is very talented.
-            Drawn at 2:15pm is says on todays date...
-            but Dr.Mengele said the murder was at 1:55pm and that they ran straight down to the testing labs?
-
-            You make your way over to Alices side.
-            A straight edge society badge. Hmm, that is conflicting from what I have heard. \n
-            """)
-        decision = input("""\n
-                        Let's go back to the common room to re-asses (Type common room) \n
-                        """).lower()
+        print("You make your way to Alices and Josh's shared room. \n"
+              "You Look at Josh's side first."
+              "\n"
+              "Everything looks normal, "
+              "Josh seems to like his comics, "
+              "he has a lot of them, "
+              "nothing out of the ordinary. \n"
+              "Oh wow amazing, he has drawn the avengers superheros, "
+              "he is very talented.\n"
+              "Drawn at 2:15pm is says on todays date..."
+              "but Dr.Mengele said the murder was at 1:55pm "
+              "and that they ran straight down to the testing labs?"
+              "\n"
+              "You make your way over to Alices side."
+              "A straight edge society badge.\n"
+              "Hmm, that is conflicting from what I have heard. \n"
+              )
+        decision = input("Let's go back to the common room to re-asses \n"
+                         "Type common room) \n"
+                         ).lower()
 
         if decision == "common room":
             common_room()
@@ -431,14 +452,18 @@ def alice_josh():
             quit()
         else:
             clear_screen()
-            print("""\n
-                Invalid Input -
-                Type Common Room \n""")
+            print("Invalid Input - \n "
+                  "(Type Common Room)"
+                  )
             time.sleep(4)
 
 
 # Dr.Robertson's Room Function
 def dr_robertson():
+    """
+    Dr.Robertsons room. Find riddle here to open safe. Piano is the answer
+    Can go to the testing labs or common room from here.
+    """
     clear_screen()
 
     if """
@@ -449,20 +474,28 @@ def dr_robertson():
 
     while True:
         clues()
-        print("""
-            You make your way into Dr.Robertson's Room.
-            It is a very safisticated looking room, nice and tidy. Lots of graphs on the walls,
-            he must live and breathe his work. No posters or pictures of anything,
-            just an unopened box of contact lenses.
-            I hope he is enjoying his Holiday Break, it looks like he needs it.
-
-            As you search his room for clues you come across a piece of laminated paper in one of his wardrobes.
-            It has a picture of a safe on it and a testing tube. Looks to be some sort of riddle on it,
-            I wonder does this riddle lead to anything? I will keep it with me just incase.
-
-            'I am a box who holds keys but not locks.
-            With the right combination, I may unlock your soul.
-            What am I?' \n""")
+        print("You make your way into Dr.Robertson's Room.\n"
+              "\n"
+              "It is a very safisticated looking room, "
+              "nice and tidy. Lots of graphs on the walls, "
+              "he must live and breathe his work. \n"
+              "No posters or pictures of anything, "
+              "just an unopened box of contact lenses.\n"
+              "I hope he is enjoying his Holiday Break, "
+              "it looks like he needs it.\n"
+              "\n"
+              "As you search his room for clues "
+              "you come across a piece of laminated paper "
+              "in one of his wardrobes.\n"
+              "It has a picture of a safe on it and a testing tube.\n"
+              "Looks to be some sort of riddle on it, "
+              "I wonder does this riddle lead to anything?\n "
+              "I will keep it with me just incase.\n"
+              "\n"
+              "'I am a box who holds keys but not locks.\n"
+              "With the right combination, I may unlock your soul.\n"
+              "What am I?'"
+              )
         decision = input("""\n
                         Mabye I should go to the testing labs,
                         mabye there is something there that this riddle can solve?\n 
