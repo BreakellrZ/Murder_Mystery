@@ -518,6 +518,11 @@ def dr_robertson():
 
  # Testing Labs function
 def testing_labs():
+    """
+    Testing labs area - here you can open the safe grab Dr.Robertsons
+    discovery and keycard and decide to
+    go into the suspects room. more clues in this room!
+    """
     clear_screen()
     if "Ripped piece of clothing, " not in inventory:
         inventory.append("Ripped piece of clothing, ")
@@ -646,6 +651,11 @@ def testing_labs():
 
 # Suspects Room Function
 def suspects():
+    """
+    Suspects room this is the final stage of the game.
+    you need all items to get into this room.
+    Here you choose who the murderer was!
+    """
     clear_screen()
 
     while True:
@@ -670,7 +680,7 @@ def suspects():
         else:
             print("You bring Mr.Mengele down to the suspects room.\n"
                   "You:'So Mr.Mengele I have some great news, "
-                  "I found Dr.Robertsons special keycard"
+                  "I found Dr.Robertsons special keycard "
                   "to open the doors.\n"
                   "Let's get this over with right now, "
                   "'I know who the killer is.\n'"
@@ -680,7 +690,7 @@ def suspects():
                   "and sleep on it?'\n"
                   "\n"
                   "You: 'No I am 100% positive on who the killer is "
-                  "- before we go in their let me explain my reasoning"
+                  "- before we go in their let me explain my reasoning "
                   "to you...'\n"
                   "\n"
                   "After explaining everything to Dr.Mengele. \n"
