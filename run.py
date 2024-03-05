@@ -13,6 +13,9 @@ notes = []
 
 # Clear the screen in a cross-platform manner
 def clear_screen():
+    """
+    Function to clear screen after each new scene in the game.
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\033c", end="")
 
@@ -22,6 +25,9 @@ clear_screen()
 
 # Clues
 def clues():
+    """
+    clues that will be shown at the top of the screen each scene
+    """
     print(f"\nInventory : {inventory}\n")
     print(f"\nRiddle: {riddle}\n")
     print(f"\nNotes: {notes}\n")
@@ -30,13 +36,16 @@ def clues():
 
 # Main Menu / Start screen function
 def main_menu():
+    """
+    main menu screen with 3 options to choose from
+    """
     while True:
         print("Hello, Welcome to Hollow Halls Murder Mystery Game. \n")
-        start = input("""
-                    Type 1: - Start Game
-                    Type 2: - View Instuctions
-                    Type 3: - Quit \n
-                    """).lower()
+        start = input(
+            "Type 1: - Start Game\n"
+            "Type 2: - View Instuctions\n"
+            "Type 3: - Quit \n "
+            ).lower()
         if start == "1":
             start_game()
             break
@@ -47,82 +56,93 @@ def main_menu():
             quit()
         else:
             clear_screen()
-            print("Invalid input - You must enter 1 to start the game or 2 to view instuctions \n")
+            print("Invalid input - \n"
+                  "You must enter 1 to start the game " 
+                  "or 2 to view instuctions\n")
 
 
 # Start Game Function
 def start_game():
+    """
+    Beginning of the game function - intro message to set the scene
+    """
     clear_screen()
     name = input("Please enter your Surname: \n").capitalize()
     clear_screen()
 
     while True:
         clues()
-        print(f"""
-            Date: 6th of March - Friday
+        print("Date: 6th of March - Friday\n"
+             "\n"
+             f"Hello Detective.{name}, "
+             "Welcome to Hollow Halls Private Psychiatric Facility."
+             "\n"
+             "I see you have arrived a lot earlier then expected, "
+             "I was just out for a run, "
+             "please ignore the sweat and heavy breathing haha."
+             "\n"
+             "My name is Dr.Mengele.\n"
+             "I am head Psychiatist and Owner of this facility "
+             "at Hollow Halls, "
+             "for over 40 years.\n"
+             "We house patients under the age of 40 here\n."
+             "Thank you for coming on such short notice, "
+             "we are happy to have you here."
+             "\n"
+             "Horrible murder today, "
+             "the body's face is completely smashed.\n"
+             "It would be impossible to ID the person. "
+             "It happened around 1:55pm "
+             "\n"
+             "Although, "
+             "one of our patients is not present in their room, "
+             "we have identified that it must be Mr.Hardy.\n"
+             "He was a lovely person, "
+             "and we are all deeply saddened and shocked "
+             "by this incident today.\n"
+             "We have reached out to his family today, "
+             "to tell them the news.\n"
+             "They never visited him.\n"
+             "The body is in the main hall, "
+             "we did not want to move it incase it gives you any clues."
+             "\n"
+             "I know you just got here but, "
+             "this is very important information.\n"
+             "I need to share it with you right away.\n"
+             "I saw four suspects running away from the body, "
+             "down towards the testing facillaties.\n"
+             "I chased them down to see their faces, "
+             "they ran into the testing laboratory rooms.\n"
+             "They were either trying to hide or run away I am not sure, "
+             "but When they went into the testing rooms, "
+             "I shut the doors behind them, "
+             "I guess they did not know that it is a one way door system.\n"
+             "They can not come back out."
+             "All four suspects are locked in their for you.\n"
+             "The only problem is ... "
+             "I do not run the testing labs I am never down here.\n"
+             "Dr.Robertson does, "
+             "you need a special Key Card to open the doors, "
+             "which only he has."
+             "\n"
+             "Now, "
+             "unfortunatly Dr.Robertson is away on Holiday for the past week,"
+             " but he is back tomorrow.\n"
+             "This will give you a lot of time "
+             "to be able to put the pieces together,"
+             "and hopefully solve this brutal Murder.\n"
+             "You are free to move around Hallow Halls as much as you like"
+             " to gather evidence,"
+             "and come to your conclusion of WHO MURDERED MR.HARDY.\n"
+             )
 
-            Hello Detective.{name},
-            Welcome to Hollow Halls Private Psychiatric Facility.
-
-            I see you have arrived a lot earlier then expected,
-            I was just out for a run,
-            please ignore the sweat and heavy breathing haha.
-
-            My name is Dr.Mengele.
-            I am head Psychiatist and Owner of this facility here at Hollow Halls,
-            for over 40 years.
-            We house patients under the age of 40 here.
-            Thank you for coming on such short notice,
-            we are happy to have you here.
-
-            Horrible murder today,
-            the body's face is completely smashed.
-            It would be impossible to ID the person.
-            It happened around 1:55pm
-
-            Although,
-            one of our patients is not present in their room,
-            we have identified that it must be Mr.Hardy.
-            He was a lovely person,
-            and we are all deeply saddened and shocked by this incident today.
-            We have reached out to his family today,
-            to tell them the news.
-            They never visited him.
-            The body is in the main hall,
-            we did not want to move it incase it gives you any clues.
-
-            I know you just got here but,
-            this is very important information. 
-            I need to share it with you right away.
-            I saw four suspects running away from the body,
-            down towards the testing facillaties.
-            I chased them down to see their faces,
-            they ran into the testing laboratory rooms.
-            They were either trying to hide or run away I am not sure,
-            but When they went into the testing rooms,
-            I shut the doors behind them,
-            I guess they did not know that it is a one way door system.
-            They can not come back out.
-            All four suspects are locked in their for you.
-            The only problem is ...
-            I do not run the testing labs I am never down here.
-            Dr.Robertson does,
-            you need a special Key Card to open the doors which only he has. 
-
-            Now,
-            unfortunatly Dr.Robertson is away on Holiday for the past week,
-            but he is back tomorrow.
-            This will give you a lot of time to be able to put the pieces together,
-            and hopefully solve this brutal Murder.
-            You are free to move around Hallow Halls as much as you want to gather evidence, 
-            and come to your conclusion of WHO MURDERED MR.HARDY.
-            """)
-
-        decision = input("""\n
-                        Ok, time to explore this facility and see what I can find.\n
-                        Do you want to go to the Main hall / the Living Room or the Testing Labs? \n
-                        (Type main hall or living room or testing labs) \n
-                        """).lower()
+        decision = input("\n"
+                        "Ok, time to explore this facility "
+                        "and see what I can find.\n"
+                        "Do you want to go to the Main hall / "
+                        "the Living Room or the Testing Labs? \n"
+                        "(Type main hall or living room or testing labs) \n"
+                        ).lower()
 
         if decision == "main hall":
             main_hall()
@@ -137,25 +157,30 @@ def start_game():
             quit()
         else:
             clear_screen()
-            print("""
-                Invalid input -
-                You must choose between the main hall or the living room or testing labs.\n
-                (Type main hall or living room or testing labs into terminal) \n
-                """)
+            print("\n"
+            "Invalid input - \n"
+            "You must choose between the main hall "
+            "or the living room or testing labs.\n"
+            "(Type main hall or living room or testing labs into terminal)\n")
             time.sleep(4)
 
 
 # Common Room function
 def common_room():
+    """
+    Common room area - when you reach a dead end you always come back
+    to the common room - the main start area for the game
+    """
     clear_screen()
 
     while True:
         clues()
-        decision = input("""
-                        You made your way back to the Common Room. \n
-                        Would you like to go to the Living room / the Main hall / the Testing Labs? \n
-                        (Type Main Hall or Living Room or Testing Labs) \n
-                        """).lower()
+        decision = input("\n"
+                        "You made your way back to the Common Room. \n"
+                        "Would you like to go to the Living room / "
+                        "the Main hall / the Testing Labs? \n"
+                        "(Type Main Hall or Living Room or Testing Labs)\n"
+                        ).lower()
 
         if decision == "main hall":
             main_hall()
@@ -170,64 +195,77 @@ def common_room():
             quit()
         else:
             clear_screen()
-            print("""
-                 Invalid input -
-                 You must choose between the main hall or the living room or testing labs.\n
-                 (Type main hall or living room or testing labs into terminal) \n
-                 """)
+            print("Invalid input - \n"
+                 "You must choose between the main hall or the living room "
+                 "or testing labs.\n"
+                 "(Type main hall or living room or "
+                 "testing labs into terminal) \n"
+                 )
             time.sleep(4)
 
 
 # Instructions function
 def instructions():
+    """
+    Instructions for the game
+    """
     print("""/n
     """)
 
 
 # Main hall function
 def main_hall():
+    """
+    Main hall area - choice to go look at the body or go up to the bedroom
+    """
     clear_screen()
 
     while True:
         clues()
-        print("""
-              You have arrived in the main hall and see the body...
-              hmm...
-              The body is at the bottom of the stairs..
-              It looks like somebody may have pushed the victim down the stairs?
-              Mabye I should take a closer look at the body to see if I can find any clues \n
-              """)
+        print("You have arrived in the main hall and see the body... \n"
+             "hmm... \n"
+             "The body is at the bottom of the stairs..\n"
+             "It looks like somebody may have pushed the victim down the stairs?"
+             " Mabye I should take a closer look"
+             " at the body to see if I can find any clues \n"
+             )
 
-        decision = input("""
-                        Should I search the body or make my way up to the bedrooms upstairs?\n
-                        (Type 'body' or 'bedroom')\n
-                        """).lower()
+        decision = input("Should I search the body "
+                         "or make my way up to the bedrooms upstairs?\n"
+                         "(Type 'body' or 'bedroom')\n"
+                         ).lower()
 
         if decision == "body":
             clear_screen()
             if "Grey hair, Glasses, Tube" not in inventory:
                 inventory.append("Grey hair, Glasses, Tube")
             if """
-                Note about the body: 
-                Looks like mabye the killer was trying to frame someone, 
+                Note about the body:
+                Looks like mabye the killer was trying to frame someone,
                 by placing the body at the end of the stairs?""" not in notes:
                 notes.append("""Note about the body: Looks like the killer was trying to frame someone, by placing the body at the end of the stairs?""")
             clues()
-            print("""\n
-                You make your way over to the body to take a closer look.
-                Oh wow... This body was not pushed down the stairs, rather it WAS STABBED to death.
-                There is multiple stab wounds in the victims back.
+            print("\n"
+                "You make your way over to the body to take a closer look.\n"
+                "Oh wow... This body was not pushed down the stairs, "
+                "rather it WAS STABBED to death. \n"
+                "There is multiple stab wounds in the victims back.\n"
 
-                Hmm.... interesting,
-                it looks like the murderer was trying to mabye frame someone by placing the body at the end of the stairs?
-                Not a bad idea... Who would want us too think that the body had been pushed down the stairs to its death?
-
-                Lets take a look in the victims pockets for any clues, looks like a pair of old glasses and a testing tube?
-                His clothes seem ripped too.
-                I'm going to keep these items in my bag for now.
-                Oh look one last piece of his grey hair, actually it looks like he was bald from what I can make out.
-                Mabye I should go upstairs and look around the bedrooms!\n
-                """)
+                "Hmm.... interesting,"
+                "it looks like the murderer was trying to mabye frame someone"
+                " by placing the body at the end of the stairs?\n"
+                "Not a bad idea... "
+                "Who would want us too think that the body"
+                "had been pushed down the stairs to its death?"
+                "\n"
+                "Lets take a look in the victims pockets for any clues, " 
+                "looks like a pair of old glasses and a testing tube?\n"
+                "His clothes seem ripped too."
+                "I'm going to keep these items in my bag for now."
+                "Oh look one last piece of his grey hair, "
+                "actually it looks like he was bald from what I can make out.\n"
+                "Mabye I should go upstairs and look around the bedrooms!\n"
+                )
 
             while True:
                 decision2 = input("""
@@ -247,9 +285,8 @@ def main_hall():
                 else:
                     clear_screen()
                     clues()
-                    print("""\n
-                        Invalid input -
-                        please type 'bedroom' or 'common room' into the terminal \n""")
+                    print("Invalid input - \n" 
+                    "please type 'bedroom' or 'common room' into the terminal \n")
                     time.sleep(4)
 
         elif decision == "bedroom":
@@ -259,7 +296,9 @@ def main_hall():
             quit()
         else:
             clear_screen()
-            print("Invalid input - please type 'body' or 'bedroom' into the terminal")
+            print("""\n
+                Invalid input -
+                please type 'body' or 'bedroom' into the terminal""")
             time.sleep(4)
 
 
@@ -340,7 +379,9 @@ def living_room():
                 else:
                     clear_screen()
                     clues()
-                    print("\nInvalid input - You should have typed alice and josh or common room\n")
+                    print("""\n
+                        Invalid input -
+                        You should have typed alice and josh or common room\n""")
                     time.sleep(4)
 
         elif decision == "dr.robertson":
@@ -350,7 +391,9 @@ def living_room():
             quit()
         else:
             clear_screen()
-            print("\nInvalid input please type in suspects or calm\n")
+            print("""\n
+                Invalid input -
+                please type in suspects or calm\n""")
             time.sleep(4)
 
 
@@ -388,7 +431,9 @@ def alice_josh():
             quit()
         else:
             clear_screen()
-            print("\n Invalid Input - type Common Room \n")
+            print("""\n
+                Invalid Input -
+                Type Common Room \n""")
             time.sleep(4)
 
 
@@ -433,7 +478,9 @@ def dr_robertson():
             quit()
         else:
             clear_screen()
-            print("\ninvalid input, Please type testing labs or common room\n")
+            print("""\n
+                Invalid input -
+                Please type testing labs or common room\n""")
             time.sleep(4)
 
 
@@ -492,7 +539,7 @@ def testing_labs():
                         but I hope they can see the bigger picture
                         and realize that this is what is best for the world.
                         I am excited to tell the world tomorrow. \n""")
-                    
+
                     if "Dr.Robertson's Discovery, Spare Key card" not in inventory:
                         inventory.append("Dr.Robertson's Discovery, Spare Key card")
 
@@ -513,7 +560,9 @@ def testing_labs():
                         else:
                             clear_screen()
                             clues()
-                        print("\nInvalid input - Type common room\n")
+                        print("""\n
+                            Invalid input -
+                            Type common room\n""")
                         time.sleep(4)
                 elif decision2 == "quit":
                     quit()
@@ -536,7 +585,9 @@ def testing_labs():
                         else:
                             clear_screen()
                             clues()
-                            print("\ninvalid input - type common room\n")
+                            print("""\n
+                                Invalid input - 
+                                Type common room\n""")
                             time.sleep(4)
 
         elif decision == "suspects room":
@@ -546,7 +597,9 @@ def testing_labs():
             quit()
         else:
             clear_screen()
-            print("\ninvalid input - Please type safe or suspects room\n")
+            print("""\n
+                  Invalid input - 
+                  Please type safe or suspects room\n""")
             time.sleep(4)
 
 
@@ -684,8 +737,10 @@ def winner():
             quit()
         else:
             clear_screen()
-            print("Invalid input type quit")
+            print("""Invalid input -
+                 Type quit""")
             time.sleep(4)
+
 
 def loser():
     clear_screen()
@@ -707,7 +762,9 @@ def loser():
             quit()
         else:
             clear_screen()
-            print("Invalid input type quit")
+            print("""Invalid input -
+                Type quit
+                """)
             time.sleep(4)
 
 
@@ -770,7 +827,9 @@ def bedroom():
                 else:
                     clear_screen()
                     clues()
-                    print("Invalid input - please type in common room to the terminal\n")
+                    print("""Invalid input -
+                        please type in common room to the terminal\n
+                        """)
                     time.sleep(4)
 
         elif decision == "common room":
@@ -780,7 +839,9 @@ def bedroom():
             quit()
         else:
             clear_screen()
-            print("Invalid input - please type in Bathroom or Common Room to the terminal \n")
+            print("""Invalid input -
+                 please type in Bathroom or Common Room to the terminal \n
+                """)
             time.sleep(4)
 
 
