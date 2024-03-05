@@ -44,7 +44,8 @@ def main_menu():
         start = input(
             "Type 1: - Start Game\n"
             "Type 2: - View Instuctions\n"
-            "Type 3: - Quit \n "
+            "Type 3: - Quit \n"
+            "\n"
             ).lower()
         if start == "1":
             start_game()
@@ -56,7 +57,7 @@ def main_menu():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n"
+            print("Invalid input -\n"
                   "You must enter 1 to start the game " 
                   "or 2 to view instuctions\n")
 
@@ -710,96 +711,183 @@ def suspects():
 
 def winner():
     clear_screen()
-    print("""
-        IT WAS YOU DR.MENGELE !!
+    print("IT WAS YOU DR.MENGELE !! \n"
+    "\n"
+    "You might be asking how did I figure it out? Well let me explain.....\n"
+     "\n"
+    "First of all, You said you were out for a 'run', "
+    "you were sweating, and out of breathe.\n"
+    "You were shocked by my early arrival, "
+    "the only reason you were sweating was because you were in a rush to "
+    "cover up this murder after you heard the maid call me.\n"
+    "When you were told I arrived earlier then expected you were shocked "
+    "and ran around as quickly as possible to try and cover this all up"
+    "but you failed.\n"
+    "This was the first lie of many. "
+    "In fact you were running around trying to frame these four 'suspects' "
+    "which you had locked"
+    "in the basement because they saw you murderer this victim.\n"
+    "\n"
+    "Forty years here huh? You are quite old.. \n"
+    "Nice set of grey hair you have Dr. "
+    "Almost as if the only piece of hair on the victims body was infact grey,"
+    "and none of your 'suspects' have grey hair? "
+    "You mentioned you did not go near or move the body? "
+    "How would the grey hair get there then? The victim was aslso bald.\n"
+    "\n"
+    "Now... you trapped them 'suspects' in there Dr, "
+    "they did not run in there themselves. \n"
+    "You drugged them after you saw them see you murder this victim.\n"
+    "As you can tell by how drugged up they all look right now you used "
+    "some sort of amnesia drug so that they would forget "
+    "about all this in the morning.\n"
+    "You had a keycard this whole time because your one is the exact same "
+    "one I found to unlock this door.\n"
+    "You had them trapped in here because you knew they could not escape "
+    "from the inside. \n"
+    "But this whole time you were just lying to me about not "
+    "being able to open the door, "
+    "and that only Dr.Robertson had a special keycard. \n"
+    "You are the owner for christ sake of course you have a keycard. \n"
+    "You wanted me to stay the night, "
+    "so that you could come up with a plan on what to do with these "
+    "four 'suspects' during the night ... \n"
+    "mabye you were going to kill them all and stage an 'escape'?? \n"
+    "You needed them trapped so you could frame them one way or "
+    "another and you needed time to think and come up with a plan "
+    "as I got here very quickly.\n"
+    "\n"
+    "I must say you done a fairly good job in trying to frame these suspects "
+    "but you missed some key details which let me to this discovery "
+    "that it was you and not them.\n"
+    "\n"
+    "You moved the body to the bottom of the stairs, "
+    "this is where the grey hair came from. \n"
+    "You then tried to frame Tom. "
+    "You knew you had stabbed the victim in the back.\n"
+    "You knew I would see the stab wounds and you thought "
+    "I would think that Tom was actually the one doing the framing. \n"
+    "You thought I would think that Tom placed the body, "
+    "at the bottom of the stiars, so that it looked like someone pushed "
+    "the body to the stairs to his death. \n"
+    "Of course Tom can not walk up the stairs and you used his disability "
+    "as a chance for me to think he was the one doing the framing. \n"
+    "When in fact is was all you. \n"
+    "Now of course it still could have been Tom.. \n"
+    "but ...It was not Tom because the actual murder weapon was upstairs !! "
+    "There would have been no way Tom could have stashed the Murder weapon "
+    "up there. So that rules him out."
+    "\n"
+    "Now you ask what about Nicki? "
+    "Nicki has OCD which your wife told me. \n"
+    "Everything in Nickis rooms is super clean. "
+    "I found blood droplets in the sink.. \n"
+    "How would she has missed this?\n"
+    "Ah yes, because it was not her... "
+    "it was you in a rush trying to clean the blood from the knife, "
+    "you left some droplets in the sink because you were in such a rush.\n"
+    "You then tried to 'hide' the knife. But really you wanted me to see it, "
+    "you wanted me to mabye think it was Nicki who murdered the victim.\n"
+    "but again DR. \n"
+    "you made a mistake. "
+    "It could not have been Nicki because you placed it in a "
+    "really high place, Nicki could never reach that she is only 5ft. \n"
+    "\n"
+    "Your wife is not much better. "
+    "She was filling me with some lies too... "
+    "She was trying to set up Alice telling me she was a bad drug user "
+    "and that she could get crazy.\n"
+    "She also said she had 'beef' with Mr.Hardy the alledged victim. "
+    "Now I am not sure if she had beef with Mr.Hardy but I do not care "
+    "about that and I will explain later, "
+    "but Alice was not a drug user inface Alice was the opposite "
+    "- Alice was part of the straight edge society which means she never "
+    "done hardcore drugs in her life.\n"
 
-        You might be asking how did I figure it out? Well let me explain.....
+    "Josh and Alice were also togehter after the murder Josh was drawing "
+    "a pciture of his favourite comic book heros this would have taken hours."
+    "\nJosh and Alice sign the back of every single picture Josh drew with "
+    "a date and time of completion.\n"
+    "There is no way they could have commited this murder because "
+    "they were in there rooms at the time. You said the 'suspects' "
+    "ran to the testing labs.\n"
+    "This is not true they must have heard the maids screem of seeing "
+    "the body in the main hall and you saw them looking out of there rooms "
+    "and drugged them and brought them down.\n"
+    "\n"
+    "So it was not Tom, Nicki, Alice, or Josh. IT WAS YOU ! \n"
+    "\n"
+    "Now.... back to explaining why I did not care that Alice may or may "
+    "not have had beef with Mr.Hardy... Mr.hardy has not been on your "
+    "records for months.. \n"
+    "I presume you may have killed him too... \n"
+    "as he is no where to be found for months from your records "
+    "and his family never visits him.\n"
+    "He is an easy pateint to pretend that this is his body, "
+    "no one would question it, not even the family. \n"
+    "\n"
+    "That body IS NOT MR.HARDY'S BODY! THAT BODY IS DR.ROBERTSON'S BODY!!\n"
+    "\n"
+    "You killed Dr.Robertson because of what he had discovered! \n"
+    "You knew it would destroy your wealth!! \n"
+    "He was about to save millions of lives and you murdered him in "
+    "cold blood because of how selfish you are.\n"
+    "You are a sick man Dr.Mengele - "
+    "Luckiliy I have figured it out and I will get Dr.Robertsons "
+    "work in the hands of the right people.\n"
+    "\n"
+    "You destroyed Dr.Robertsons face because you did not want him ID'd "
+    "- You were going to dispose of his body during the night. \n"
+    "You used an excuse that he was on Holiday. \n"
+    "You were going to use that as an excuse as to why he never returned.... "
+    "and must have died over there.\n"
+    "I read his diary. He was here YESTERDAY  Dr.... "
+    "You told me he has been gone for a week on Holiday... \n"
+    "\n"
+    "There was some piece of ripped clothing down here I found near "
+    "the testing labs... It was his.\n"
+    "You stabbed him down here after he told you about the discovery "
+    "he made. You could not let this happen. \n"
+    "You stabbed him and a piece of his clothing came off with it, "
+    "his body when I searched it in the main hall has a peice of clothing "
+    "missing from his back.\n"
+    "You moved him up to the main hall, "
+    "the maid saw the body and called me. "
+    "You then had to quickly come up with a solution to frame "
+    "someone else and get any"
+    "suspicion away from you.\n"
+    "He also had a pair of glasses and a testing tube in his pocket. \n"
+    "You really should have taken them out Dr.Mengele... "
+    "but I know you were in a rush.\n"
+    "Interesting how Dr.Robertson had some unopened contact lenses in his "
+    "room. \n He must still stick to wearing his glasses... \n"
+    "The testing tube is a bit of a giveaway I dont think I need to "
+    "explain that.\n"
+    "\n"
+    "So there we have it... YOU MURDERED DR.ROBERTSON. \n"
+    "\n"
+    "'You have the right to remain silent. "
+    "Anything you say can and will be used against you in a court of law. "
+    "You have the right to an attorney. "
+    "If you cannot afford an attorney, one will be provided for you. "
+    "Do you understand the rights I have just read to you?'\n "
+    "\n"
+    ".................................................................. \n"
 
-        First of all, You said you were out for a 'run', you were sweating, and out of breathe.
-        You were shocked by my early arrival, the only reason you were sweating was because you were in a rush to cover up this murder after you heard the maid call me.
-        When you were told I arrived earlier then expected you were shocked and ran around as quickly as possible to try and cover this all up but you failed.
-        This was the first lie of many. In fact you were running around trying to frame these four 'suspects' which you had locked
-        in the basement because they saw you murderer this victim.
-
-        Forty years here huh? You are quite old.. Nice set of grey hair you have Dr. Almost as if the only piece of hair on the victims body was infact grey,
-        and none of your 'suspects' have grey hair? You mentioned you did not go near or move the body? How would the grey hair get there then? The victim was aslso bald.
-
-        Now... you trapped them 'suspects' in there Dr, they did not run in there themselves. You drugged them after you saw them see you murder this victim.
-        As you can tell by how drugged up they all look right now you used some sort of amnesia drug so that they would forget about all this in the morning.
-        You had a keycard this whole time because your one is the exact same one I found to unlock this door.
-        You had them trapped in here because you knew they could not escape from the inside. But this whole time you were just lying to me about not being able to open the door,
-        and that only Dr.Robertson had a special keycard. You are the owner for christ sake of course you have a keycard. You wanted me to stay the night,
-        so that you could come up with a plan on what to do with these four 'suspects' during the night ... mabye you were going to kill them all and stage an 'escape'??
-        You needed them trapped so you could frame them one way or another and you needed time to think and come up with a plan as I got here very quickly.
-
-        I must say you done a fairly good job in trying to frame these suspects but you missed some key details which let me to this discovery that it was you and not them.
-
-        You moved the body to the bottom of the stairs, this is where the grey hair came from. You then tried to frame Tom. You knew you had stabbed the victim in the back.
-        You knew I would see the stab wounds and you thought I would think that Tom was actually the one doing the framing. You thought I would think that Tom placed the body,
-        at the bottom of the stiars, so that it looked like someone pushed the body to the stairs to his death. Of course Tom can not walk up the stairs and you used his disability
-        as a chance for me to think he was the one doing the framing. When in fact is was all you. Now of course it still could have been Tom..
-        but ...It was not Tom because the actual murder weapon was upstairs !! There would have been no way Tom could have stashed the Murder weapon up there. So that rules him out.
-
-        Now you ask what about Nicki? Nicki has OCD which your wife told me. Everything in Nickis rooms is super clean. I found blood droplets in the sink.. How would she has missed this?
-        Ah yes, because it was not her... it was you in a rush trying to clean the blood from the knife, you left some droplets in the sink because you were in such a rush.
-        You then tried to 'hide' the knife. But really you wanted me to see it, you wanted me to mabye think it was Nicki who murdered the victim. but again DR.
-        you made a mistake. It could not have been Nicki because you placed it in a really high place, Nicki could never reach that she is only 5ft.
-
-        Your wife is not much better. She was filling me with some lies too... She was trying to set up Alice telling me she was a bad drug user and that she could get crazy.
-        She also said she had 'beef' with Mr.Hardy the alledged victim. Now I am not sure if she had beef with Mr.Hardy but I do not care about that and I will explain later,
-        but Alice was not a drug user inface Alice was the opposite - Alice was part of the straight edge society which means she never done hardcore drugs in her life.
-
-        Josh and Alice were also togehter after the murder Josh was drawing a pciture of his favourite comic book heros this would have taken hours.
-        Josh and Alice sign the back of every single picture Josh drew with a date and time of completion.
-        There is no way they could have commited this murder because they were in there rooms at the time. You said the 'suspects' ran to the testing labs.
-        This is not true they must have heard the maids screem of seeing the body in the main hall and you saw them looking out of there rooms and drugged them and brought them down.
-
-        So it was not Tom, Nicki, Alice, or Josh. IT WAS YOU ! 
-
-        Now.... back to explaining why I did not care that Alice may or may not have had beef with Mr.Hardy... Mr.hardy has not been on your records for months..
-        I presume you may have killed him too... as he is no where to be found for months from your records and his family never visits him.
-        He is an easy pateint to pretend that this is his body, no one would question it, not even the family. 
-
-        That body IS NOT MR.HARDY'S BODY! THAT BODY IS DR.ROBERTSON'S BODY!!
-
-        You killed Dr.Robertson because of what he had discovered!
-        You knew it would destroy your wealth!! 
-        He was about to save millions of lives and you murdered him in cold blood because of how selfish you are.
-        You are a sick man Dr.Mengele - Luckiliy I have figured it out and I will get Dr.Robertsons work in the hands of the right people.
-
-        You destroyed Dr.Robertsons face because you did not want him ID'd - You were going to dispose of his body during the night.
-        You used an excuse that he was on Holiday. You were going to use that as an excuse as to why he never returned.... and must have died over there.
-        I read his diary. He was here YESTERDAY  Dr.... You told me he has been gone for a week on Holiday... 
-
-        There was some piece of ripped clothing down here I found near the testing labs... It was his.
-        You stabbed him down here after he told you about the discovery he made. You could not let this happen. 
-        You stabbed him and a piece of his clothing came off with it, his body when I searched it in the main hall has a peice of clothing missing from his back.
-        You moved him up to the main hall, the maid saw the body and called me. You then had to quickly come up with a solution to frame someone else and get any
-        suspicion away from you.
-        He also had a pair of glasses and a testing tube in his pocket. You really should have taken them out Dr.Mengele... but I know you were in a rush.
-        Interesting how Dr.Robertson had some unopened contact lenses in his room. He must still stick to wearing his glasses...
-        The testing tube is a bit of a giveaway I dont think I need to explain that.
-
-        So there we have it... YOU MURDERED DR.ROBERTSON. 
-
-        “You have the right to remain silent. Anything you say can and will be used against you in a court of law.
-        You have the right to an attorney. If you cannot afford an attorney, one will be provided for you.
-        Do you understand the rights I have just read to you?”
-
-        ................................................................
-
-        CONGRATULATIONS YOU HAVE SOLVED THE HALLOW HALLS MURDER MYSTERY WELL DONE !! \n
-        GAME OVER.
-        """)
+    "CONGRATULATIONS YOU HAVE SOLVED THE HALLOW HALLS MURDER MYSTERY "
+    "WELL DONE !! \n"
+    "GAME OVER. \n"
+    )
 
     while True:
-        ending = input("Type quit to quit the game")
+        ending = input("Type quit to quit the game"
+        )
         if ending == "quit":
             quit()
         else:
             clear_screen()
-            print("""Invalid input -
-                 Type quit""")
+            print("Invalid input -\n Type quit"
+            )
             time.sleep(4)
 
 
@@ -807,13 +895,12 @@ def loser():
     clear_screen()
 
     while True:
-        print("""
-            Damn you got it wrong...
-            try again next time... YOU JUST SENT AN INNOCENT PERSON TO PRISON HOW COULD YOU!!
-            """)
-        ending = input("""
-                      Type restart to restart the game
-                      """).lower()
+        print("Damn you got it wrong...\n"
+            "try again next time... \n"
+            "YOU JUST SENT AN INNOCENT PERSON TO PRISON HOW COULD YOU!!"
+            )
+        ending = input("Type restart to restart the game"
+                      ).lower()
 
         if ending == "restart":
             clear_screen()
@@ -823,37 +910,46 @@ def loser():
             quit()
         else:
             clear_screen()
-            print("""Invalid input -
-                Type quit
-                """)
+            print("Invalid input - \n Type quit"
+                )
             time.sleep(4)
 
 
 # Bedroom
 def bedroom():
+    """
+    Bedroom fucntion - can go to the bathroom and from there the common room
+    Finds knife and some more clues in this scene. Adds Knife to inventory.
+    and some notes about the room.
+    """
     clear_screen()
     if "Knife" not in inventory:
         inventory.append("Knife")
 
     while True:
         clues()
-        print("""
-            You make your way up the stairs and search the bedrooms.
-            You dont seem to see anything suspicious until finally the last room.
+        print("You make your way up the stairs and search the bedrooms.\n"
+        "\n"
+        "You dont seem to see anything suspicious "
+        "until finally the last room.\n"
+        "\n"
+        "In the last room as you are looking, "
+        "you see something shiny at the very top of the wardrobe, "
+        "stashed away in the far corner.\n"
+        "You check and you find a knife - AH HA!! \n"
+        "This must be the murder weapon, "
+        "but the knife looks very clean and has no blood on it??\n"
+        "\n"
+        "Let's keep this with us.\n"
+        "The murderer must be very tall to reach up there.\n"
+        )
 
-            In the last room as you are looking,
-            you see something shiny at the very top of the wardrobe,
-            stashed away in the far corner.
-            You check and you find a knife - AH HA!!
-            This must be the murder weapon, but the knife looks very clean and has no blood on it??
-
-            Let's keep this with us.
-            The murderer must be very tall to reach up there.\n""")
-
-        decision = input("""\n
-                        The bathroom door seens to be open in this bedroom,
-                        Do you want to have a look in there or do you want to make your way back to the common room?\n
-                        (Bathroom / Common Room) \n""").lower()
+        decision = input("\nThe bathroom door seems to be open "
+        "in this bedroom, "
+        "Do you want to have a look in there or do you want to make your way "
+        "back to the common room?\n "
+        "(Bathroom / Common Room) \n"
+        ).lower()
 
         if decision == "bathroom":
             clear_screen()
@@ -865,20 +961,24 @@ def bedroom():
             - Killer in a rush 
             - Who's Bedroom is that? Must be very tall""" not in notes:
                 notes.append("""- Notes about the bathroom/bedroom: - Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? Must be very tall""")
-            print("""
-                Medicine cabnit looks empty, nice and clean...
-                what is that?
-
-                Oh wow, uhh jesus there looks like there is some drops of blood in the sink..
-                This may be where the killer sleeps this may be the killer..
-                It looks like they were in a rush and did not clean properly.
-
-                - Ok lets make my way back downstairs and into the common room to re-asses. \n""")
+            print("Medicine cabnit looks empty, nice and clean... \n"
+            "\n"
+            "what is that?\n"
+            "\n"
+            "Oh wow, "
+            "uhh jesus there looks like there is some drops of blood "
+            "in the sink..\n"
+            "This may be where the killer sleeps this may be the killer..\n"
+            "It looks like they were in a rush and did not clean properly. \n"
+            "\n"
+            "Ok lets make my way back downstairs "
+            "and into the common room to re-asses. \n"
+            )
 
             while True:
-                home = input("""\n
-                            Time to make my way back to the Common Room (Type Common Room to get there) \n
-                            """).lower()
+                home = input("\nTime to make my way back to the Common Room "
+                "(Type Common Room to get there) \n"
+                ).lower()
 
                 if home == "common room":
                     common_room()
@@ -888,9 +988,9 @@ def bedroom():
                 else:
                     clear_screen()
                     clues()
-                    print("""Invalid input -
-                        please type in common room to the terminal\n
-                        """)
+                    print("Invalid input -\n"
+                    "please type in common room to the terminal\n"
+                    )
                     time.sleep(4)
 
         elif decision == "common room":
@@ -900,9 +1000,9 @@ def bedroom():
             quit()
         else:
             clear_screen()
-            print("""Invalid input -
-                 please type in Bathroom or Common Room to the terminal \n
-                """)
+            print("Invalid input -\n"
+            "please type in Bathroom or Common Room to the terminal \n"
+            )
             time.sleep(4)
 
 
