@@ -1,4 +1,5 @@
 import os
+import time
 
 # Inventory for items picked up in the game
 inventory = []
@@ -9,31 +10,28 @@ riddle = []
 # notes
 notes = []
 
-# Notes on suspects
-suspects = []
-
 
 # Clear the screen in a cross-platform manner
 def clear_screen():
-  os.system('cls' if os.name == 'nt' else 'clear')
-  print("\033c", end="")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\033c", end="")
 
 clear_screen()
 
 
 # Clues
 def clues():
-        print(f"\nInventory : {inventory}\n")
-        print(f"\nRiddle: {riddle}\n")
-        print(f"\nNotes: {notes}\n")
-        print("---"*20)
+    print(f"\nInventory : {inventory}\n")
+    print(f"\nRiddle: {riddle}\n")
+    print(f"\nNotes: {notes}\n")
+    print("---"*20)
         
 
 # Main Menu / Start screen function
 def main_menu():
     while True:
         print("Hello, Welcome to Hollow Halls Murder Mystery Game. \n")
-        start = input("Type 1: - Start Game \n Type 2: - View Instuctions \n Type 3: - Quit \n").lower()
+        start = input("Type 1: - Start Game \nType 2: - View Instuctions \nType 3: - Quit \n").lower()
         if start == "1":
             start_game()  
             break 
@@ -102,6 +100,7 @@ Do you want to go to the Main hall / the Living Room or the Testing Labs? \n
             clear_screen()
             print("""Invalid input - You must choose between the main hall or the living room or testing labs.\n
 (Type main hall or living room or testing labs into terminal) \n""")
+            time.sleep(4)
             
 
 # Common Room function
@@ -110,7 +109,7 @@ def common_room():
     while True:
         clues()
         decision = input("""You made your way back to the Common Room. \n
-Would you like to go to the Living room / the Main hall \ the Testing Labs?
+Would you like to go to the Living room / the Main hall \ the Testing Labs? \n
 (Type Main Hall or Living Room or Testing Labs) \n""").lower()
         if decision == "main hall":
             main_hall()
@@ -125,8 +124,9 @@ Would you like to go to the Living room / the Main hall \ the Testing Labs?
             quit()
         else:
             clear_screen()
-            print("""Invalid input - You must choose between the main hall or the living room or testing labs.
+            print("""Invalid input - You must choose between the main hall or the living room or testing labs.\n
 (Type main hall or living room or testing labs into terminal) \n""")
+            time.sleep(4)
         
 
 # Instructions function
@@ -183,6 +183,7 @@ or back to the common room?
                     clear_screen()
                     clues()
                     print(" \n Invalid input - please type 'bedroom' or 'common room' into the terminal \n")
+                    time.sleep(4)
         elif decision == "bedroom":
             bedroom()
             break
@@ -191,6 +192,7 @@ or back to the common room?
         else:
             clear_screen()
             print("Invalid input - please type 'body' or 'bedroom' into the terminal")
+            time.sleep(4)
 
 
 # Living room function
@@ -254,7 +256,8 @@ You: All interesting points there. I should try and remember this conversation."
                 else:
                     clear_screen()
                     clues()
-                    print("Invalid input - You should have typed alice and josh or common room")
+                    print("\nInvalid input - You should have typed alice and josh or common room\n")
+                    time.sleep(4)
         elif decision == "dr.robertson":
             dr_robertson()
             break
@@ -262,7 +265,8 @@ You: All interesting points there. I should try and remember this conversation."
             quit()
         else:
             clear_screen()
-            print("Invalid input please type in suspects or calm")
+            print("\nInvalid input please type in suspects or calm\n")
+            time.sleep(4)
 
 
 # Alice and Joshs room function
@@ -291,8 +295,9 @@ A straight edge society badge. Hmm, that is conflicting from what I have heard. 
         else:
             clear_screen()
             print("\n Invalid Input - type Common Room \n")
+            time.sleep(4)
 
-    
+
 # Dr.Robertson's Room Function
 def dr_robertson():
     clear_screen()
@@ -327,6 +332,7 @@ mabye there is something there that this riddle can solve?\n
         else:
             clear_screen()
             print("\ninvalid input, Please type testing labs or common room\n")
+            time.sleep(4)
 
 
  # Testing Labs function       
@@ -386,6 +392,7 @@ Type (common room)\n""").lower()
                             clear_screen()
                             clues()
                         print("\nInvalid input - Type common room\n")
+                        time.sleep(4)
                 elif decision2 == "quit":
                     quit()
                 else:
@@ -401,6 +408,7 @@ Type (common room)\n""").lower()
                             clear_screen()
                             clues()
                             print("\ninvalid input - type common room\n")
+                            time.sleep(4)
 
         elif decision == "suspects room":
             suspects()
@@ -410,6 +418,7 @@ Type (common room)\n""").lower()
         else:
             clear_screen()
             print("\ninvalid input - Please type safe or suspects room\n")
+            time.sleep(4)
 
                 
 # Suspects Room Function            
@@ -430,6 +439,7 @@ def suspects():
             else:
                 clear_screen()
                 print("Invalid input - Type common room")
+                time.sleep(4)
         else:
             print("""You bring Mr.Mengele down to the suspects room.
 You:'So Mr.Mengele I have some great news, I found Dr.Robertsons special keycard to open the doors.
@@ -538,6 +548,7 @@ GAME OVER.
         else:
             clear_screen()
             print("Invalid input type quit")
+            time.sleep(4)
 
 def loser():
     clear_screen()
@@ -550,7 +561,10 @@ def loser():
             break
         elif ending == "quit":
             quit()
-
+        else:
+            clear_screen()
+            print("Invalid input type quit")
+            time.sleep(4)
 
 
 # Bedroom
@@ -599,7 +613,8 @@ It looks like they were in a rush and did not clean properly.
                 else:
                     clear_screen()
                     clues()
-                    print("Invalid input - please type in common room to the terminal\n") 
+                    print("Invalid input - please type in common room to the terminal\n")
+                    time.sleep(4) 
 
         elif decision == "common room":
             common_room()
@@ -609,6 +624,7 @@ It looks like they were in a rush and did not clean properly.
         else:
             clear_screen()
             print("Invalid input - please type in Bathroom or Common Room to the terminal \n")
+            time.sleep(4)
             
 
 # Calling Functions
