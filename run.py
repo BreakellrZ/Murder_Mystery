@@ -37,7 +37,13 @@ def clues():
     print("---\n"*60)
 
 
-print(Fore.RED + """
+# Main Menu / Start screen function
+def main_menu():
+    """
+    main menu screen with 3 options to choose from
+    """
+    while True:
+        print(Fore.RED + """
 ++--------------------------------------------------------++
 ||                                                        ||
 ||                                                        ||
@@ -66,14 +72,6 @@ print(Fore.RED + """
 ++--------------------------------------------------------++
 \n
 """)
-
-
-# Main Menu / Start screen function
-def main_menu():
-    """
-    main menu screen with 3 options to choose from
-    """
-    while True:
         print(Style.BRIGHT + Fore.GREEN +
               "Hello, Welcome to Hollow Halls Murder "
               "Mystery Game. \n")
