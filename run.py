@@ -1,5 +1,8 @@
 import os
 import time
+import colorama
+from colorama import Fore, Style
+colorama.init(autoreset=True)
 
 # Inventory for items picked up in the game
 inventory = []
@@ -28,10 +31,10 @@ def clues():
     """
     clues that will be shown at the top of the screen each scene
     """
-    print(f"\nInventory : {inventory}\n")
-    print(f"\nRiddle: {riddle}\n")
-    print(f"\nNotes: {notes}\n")
-    print("---"*20)
+    print(Fore.GREEN + f"\nInventory : {inventory}\n")
+    print(Fore.YELLOW + f"\nRiddle: {riddle}\n")
+    print(Fore.CYAN + f"\nNotes: {notes}\n")
+    print("---"*120)
 
 
 # Main Menu / Start screen function
@@ -40,7 +43,9 @@ def main_menu():
     main menu screen with 3 options to choose from
     """
     while True:
-        print("Hello, Welcome to Hollow Halls Murder Mystery Game. \n")
+        print(Style.BRIGHT + Fore.GREEN +
+              "Hello, Welcome to Hollow Halls Murder "
+              "Mystery Game. \n")
         start = input(
             "Type 1: - Start Game\n"
             "Type 2: - View Instuctions\n"
@@ -57,7 +62,7 @@ def main_menu():
             quit()
         else:
             clear_screen()
-            print("Invalid input -\n"
+            print(Fore.RED + "Invalid input -\n"
                   "You must enter 1 to start the game "
                   "or 2 to view instuctions\n")
 
@@ -73,7 +78,7 @@ def start_game():
 
     while True:
         clues()
-        print("Date: 6th of March - Friday\n"
+        print(Style.BRIGHT + "Date: 6th of March - Friday\n"
               "\n"
               f"Hello Detective.{name}, "
               "Welcome to Hollow Halls Private Psychiatric Facility."
@@ -158,14 +163,14 @@ def start_game():
             quit()
         else:
             clear_screen()
-            print("\n"
+            print(Fore.RED + "\n"
                   "Invalid input - \n"
                   "You must choose between the main hall "
                   "or the living room or testing labs.\n"
                   "(Type main hall or living room or testing labs into "
                   "terminal)\n"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Common Room function
@@ -198,13 +203,13 @@ def common_room():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n"
+            print(Fore.RED + "Invalid input - \n"
                   "You must choose between the main hall or the living room "
                   "or testing labs.\n"
                   "(Type main hall or living room or "
                   "testing labs into terminal) \n"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Instructions function
@@ -225,7 +230,8 @@ def main_hall():
 
     while True:
         clues()
-        print("You have arrived in the main hall and see the body... \n"
+        print(Style.BRIGHT + "You have arrived in the main hall and see the "
+              "body... \n"
               "hmm... \n"
               "The body is at the bottom of the stairs..\n"
               "It looks like somebody may have pushed the victim "
@@ -252,7 +258,7 @@ def main_hall():
                              "by placing the body at the end of the stairs?"
                              )
             clues()
-            print("\n"
+            print(Style.BRIGHT + "\n"
                   "You make your way over to the body to take a closer look."
                   "\n"
                   "Oh wow... This body was not pushed down the stairs, "
@@ -294,11 +300,11 @@ def main_hall():
                     quit()
                 else:
                     clear_screen()
-                    clues()
-                    print("Invalid input - \n"
+                    print(Fore.RED + "Invalid input - \n"
                           "please type 'bedroom' or 'common room'"
                           "into the terminal\n")
-                    time.sleep(4)
+                    time.sleep(3)
+                    clues()
 
         elif decision == "bedroom":
             bedroom()
@@ -307,10 +313,10 @@ def main_hall():
             quit()
         else:
             clear_screen()
-            print("\n"
+            print(Fore.RED + "\n"
                   "Invalid input -"
                   "please type 'body' or 'bedroom' into the terminal")
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Living room function
@@ -323,7 +329,7 @@ def living_room():
 
     while True:
         clues()
-        print("You make your way to the living room and see "
+        print(Style.BRIGHT + "You make your way to the living room and see "
               "Dr.Mengeles wife.\n"
               "\n"
               "You: 'Hello Ms.Mengele, I am the detetive you called. "
@@ -349,7 +355,8 @@ def living_room():
         if decision == "suspects":
             clear_screen()
             clues()
-            print("You: 'So Ms.Mengele can you tell me a bit about "
+            print(Style.BRIGHT + "You: 'So Ms.Mengele can you tell me a "
+                  "bit about "
                   "the suspects?'\n"
                   "\n"
                   "Ms.Mengele: ' um Yes Dectetive of course.\n"
@@ -405,11 +412,11 @@ def living_room():
                     quit()
                 else:
                     clear_screen()
-                    clues()
-                    print("Invalid input - \n"
+                    print(Fore.RED + "Invalid input - \n"
                           "You should have typed alice and josh or "
                           "common room\n")
-                    time.sleep(4)
+                    time.sleep(3)
+                    clues()
 
         elif decision == "dr.robertson":
             dr_robertson()
@@ -418,9 +425,9 @@ def living_room():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n"
-                  "please type in suspects or calm\n")
-            time.sleep(4)
+            print(Fore.RED + "Invalid input - \n"
+                  "please type in suspects or Dr.Robertson\n")
+            time.sleep(3)
 
 
 # Alice and Joshs room function
@@ -442,7 +449,8 @@ def alice_josh():
 
     while True:
         clues()
-        print("You make your way to Alices and Josh's shared room. \n"
+        print(Style.BRIGHT + "You make your way to Alices and Josh's shared "
+              "room. \n"
               "You Look at Josh's side first."
               "\n"
               "Everything looks normal, "
@@ -470,10 +478,10 @@ def alice_josh():
             quit()
         else:
             clear_screen()
-            print("Invalid Input - \n "
+            print(Fore.RED + "Invalid Input - \n "
                   "(Type Common Room)"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Dr.Robertson's Room Function
@@ -495,7 +503,7 @@ def dr_robertson():
 
     while True:
         clues()
-        print("You make your way into Dr.Robertson's Room.\n"
+        print(Style.BRIGHT + "You make your way into Dr.Robertson's Room.\n"
               "\n"
               "It is a very safisticated looking room, "
               "nice and tidy. Lots of graphs on the walls, "
@@ -533,9 +541,9 @@ def dr_robertson():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n"
+            print(Fore.RED + "Invalid input - \n"
                   "Please type testing labs or common room\n")
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Testing Labs function
@@ -551,7 +559,7 @@ def testing_labs():
 
     while True:
         clues()
-        print("You make your way down into the testing labs.\n"
+        print(Style.BRIGHT + "You make your way down into the testing labs.\n"
               "It looks dark and lonely down here.\n"
               "I guess not a lot of people come down here bar Dr.Robertson.\n"
               "On the ground in front of you, "
@@ -576,17 +584,20 @@ def testing_labs():
         if decision == "safe":
             clear_screen()
             clues()
-            print("You make your way over to the safe.\n"
+            print(Style.BRIGHT + "You make your way over to the safe.\n"
                   "This looks tricky... it looks like I need to type in "
                   "a word.\n")
 
             while True:
                 decision2 = input("\nInput the word you think is needed to "
-                                  "open the safe"
+                                  "open the safe\n"
                                   ).lower()
 
                 if decision2 == "piano":
-                    print("\nLooks like a diary, lets take a look."
+                    clear_screen()
+                    clues()
+                    print(Style.BRIGHT + "\nLooks like a diary, lets take a "
+                          "look.\n"
                           "'Date march 5th 2024.\n"
                           "Time of day: 7pm.\n"
                           "\n"
@@ -621,7 +632,8 @@ def testing_labs():
                                          "Spare Key card")
 
                     while True:
-                        decision3 = input("\nWOW THIS IS VERY IMPORTANT -\n"
+                        decision3 = input(Style.BRIGHT + "\nWOW THIS IS VERY "
+                                          "IMPORTANT -\n"
                                           "Lots of clues in that diary.\n"
                                           "hmm ... \n"
                                           "some things just dont quite add "
@@ -646,16 +658,16 @@ def testing_labs():
                             quit()
                         else:
                             clear_screen()
-                            clues()
-                        print("\nInvalid input -\n "
+                        print(Fore.RED + "\nInvalid input -\n"
                               "Type common room\n")
-                        time.sleep(4)
+                        time.sleep(3)
+                        clues()
                 elif decision2 == "quit":
                     quit()
                 else:
 
                     while True:
-                        print("Damn, "
+                        print(Style.BRIGHT + "Damn, "
                               "looks like I got it wrong, "
                               "mabye I can find a clue for this somewhere\n"
                               )
@@ -670,11 +682,11 @@ def testing_labs():
                             quit()
                         else:
                             clear_screen()
-                            clues()
-                            print("\nInvalid input - \n"
+                            print(Fore.RED + "\nInvalid input - \n"
                                   "Type common room\n"
                                   )
-                            time.sleep(4)
+                            time.sleep(3)
+                            clues()
 
         elif decision == "suspects room":
             suspects()
@@ -683,10 +695,10 @@ def testing_labs():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n"
+            print(Fore.RED + "Invalid input - \n"
                   "Please type safe or suspects room\n"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Suspects Room Function
@@ -701,10 +713,11 @@ def suspects():
     while True:
         clues()
         if len(inventory) < 5:
-            print("I do not think I have searched Hallow Halls enough yet,"
+            print(Style.BRIGHT + "I do not think I have searched Hallow Halls "
+                  "enough yet,"
                   " lets come back later when we have more clues found \n"
                   "(You Need all 8 items to enter) \n")
-            decision = input("\nType common room"
+            decision = input("\nType common room "
                              "to continue search for clues\n"
                              ).lower()
 
@@ -715,10 +728,12 @@ def suspects():
                 quit()
             else:
                 clear_screen()
-                print("Invalid input - Type common room")
-                time.sleep(4)
+                print(Fore.RED + "Invalid input - Type common room")
+                time.sleep(3)
+                clues()
         else:
-            print("You bring Mr.Mengele down to the suspects room.\n"
+            print(Style.BRIGHT + "You bring Mr.Mengele down to the "
+                  "suspects room.\n"
                   "You:'So Mr.Mengele I have some great news, "
                   "I found Dr.Robertsons special keycard "
                   "to open the doors.\n"
@@ -750,7 +765,7 @@ def suspects():
 
 def winner():
     clear_screen()
-    print("IT WAS YOU DR.MENGELE !! \n"
+    print(Style.BRIGHT + "IT WAS YOU DR.MENGELE !! \n"
           "\n"
           "You might be asking how did I figure it out? Well let me "
           "explain "
@@ -946,26 +961,26 @@ def winner():
           )
 
     while True:
-        ending = input("Type quit to quit the game"
+        ending = input("Type quit to quit the game \n"
                        )
         if ending == "quit":
             quit()
         else:
             clear_screen()
-            print("Invalid input -\n Type quit"
+            print(Fore.RED + "Invalid input -\n Type quit"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 def loser():
     clear_screen()
 
     while True:
-        print("Damn you got it wrong...\n"
+        print(Style.BRIGHT + "Damn you got it wrong...\n"
               "try again next time... \n"
               "YOU JUST SENT AN INNOCENT PERSON TO PRISON HOW COULD YOU!!"
               )
-        ending = input("Type restart to restart the game"
+        ending = input("Type restart to restart the game\n"
                        ).lower()
 
         if ending == "restart":
@@ -976,9 +991,9 @@ def loser():
             quit()
         else:
             clear_screen()
-            print("Invalid input - \n Type quit"
+            print(Fore.RED + "Invalid input - \n Type Restart\n"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Bedroom
@@ -994,7 +1009,8 @@ def bedroom():
 
     while True:
         clues()
-        print("You make your way up the stairs and search the bedrooms.\n"
+        print(Style.BRIGHT + "You make your way up the stairs and search "
+              "the bedrooms.\n"
               "\n"
               "You dont seem to see anything suspicious "
               "until finally the last room.\n"
@@ -1031,7 +1047,8 @@ def bedroom():
                              "- Drops of Blood in sink - "
                              "Killer in a rush - Who's Bedroom is that? "
                              "Must be very tall")
-            print("Medicine cabnit looks empty, nice and clean... \n"
+            print(Style.BRIGHT + "Medicine cabnit looks empty, nice and "
+                  "clean... \n"
                   "\n"
                   "what is that?\n"
                   "\n"
@@ -1059,11 +1076,11 @@ def bedroom():
                     quit()
                 else:
                     clear_screen()
-                    clues()
-                    print("Invalid input -\n"
+                    print(Fore.RED + "Invalid input -\n"
                           "please type in common room to the terminal\n"
                           )
-                    time.sleep(4)
+                    time.sleep(3)
+                    clues()
 
         elif decision == "common room":
             common_room()
@@ -1072,10 +1089,10 @@ def bedroom():
             quit()
         else:
             clear_screen()
-            print("Invalid input -\n"
+            print(Fore.RED + "Invalid input -\n"
                   "please type in Bathroom or Common Room to the terminal \n"
                   )
-            time.sleep(4)
+            time.sleep(3)
 
 
 # Calling Functions
