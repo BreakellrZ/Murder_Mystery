@@ -34,7 +34,7 @@ def clues():
     print(Fore.GREEN + f"\nInventory : {inventory}\n")
     print(Fore.YELLOW + f"\nRiddle: {riddle}\n")
     print(Fore.CYAN + f"\nNotes: {notes}\n")
-    print("---"*120)
+    print("---\n"*60)
 
 
 # Main Menu / Start screen function
