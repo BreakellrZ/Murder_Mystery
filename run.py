@@ -244,10 +244,13 @@ def main_hall():
             if "Grey hair, Glasses, Tube" not in inventory:
                 inventory.append("Grey hair, Glasses, Tube")
             if """
-                Note about the body:
-                Looks like mabye the killer was trying to frame someone,
-                by placing the body at the end of the stairs?""" not in notes:
-                notes.append("""Note about the body: Looks like the killer was trying to frame someone, by placing the body at the end of the stairs?""")
+            Note about the body:
+            Looks like mabye the killer was trying to frame someone,
+            by placing the body at the end of the stairs?""" not in notes:
+                notes.append("Note about the body: Looks like the "
+                             "killer was trying to frame someone, "
+                             "by placing the body at the end of the stairs?"
+                             )
             clues()
             print("\n"
                   "You make your way over to the body to take a closer look."
@@ -433,7 +436,9 @@ def alice_josh():
     Notes about Alice and Josh's room:
     'Drawing drawn at 2:15pm murder was at 1:55pm'
     """ not in notes:
-        notes.append("""Notes about Alice and Josh's room:'Drawing drawn at 2:15pm murder was at 1:55pm'""")
+        notes.append("Notes about Alice and Josh's room: "
+                     "'Drawing drawn at 2:15pm murder was at 1:55pm'"
+                     )
 
     while True:
         clues()
@@ -480,10 +485,13 @@ def dr_robertson():
     clear_screen()
 
     if """
-        'I am a box who holds keys but not locks.
-        With the right combination, I may unlock your soul. What am I?'
-        """ not in riddle:
-        riddle.append("""'I am a box who holds keys but not locks. With the right combination, I may unlock your soul. What am I?'""")
+    'I am a box who holds keys but not locks.
+    With the right combination, I may unlock your soul. What am I?'
+    """ not in riddle:
+        riddle.append("'I am a box who holds keys but not locks. "
+                      "With the right combination, I may unlock your soul. "
+                      "What am I?'"
+                      )
 
     while True:
         clues()
@@ -606,8 +614,11 @@ def testing_labs():
                           "I am excited to tell the world tomorrow. \n"
                           )
 
-                    if "Dr.Robertson's Discovery, Spare Key card" not in inventory:
-                        inventory.append("Dr.Robertson's Discovery, Spare Key card")
+                    if """
+                    Dr.Robertson's Discovery,
+                    Spare Key card""" not in inventory:
+                        inventory.append("Dr.Robertson's Discovery, "
+                                         "Spare Key card")
 
                     while True:
                         decision3 = input("\nWOW THIS IS VERY IMPORTANT -\n"
@@ -911,7 +922,8 @@ def winner():
           "He also had a pair of glasses and a testing tube in his pocket. \n"
           "You really should have taken them out Dr.Mengele... "
           "but I know you were in a rush.\n"
-          "Interesting how Dr.Robertson had some unopened contact lenses in his "
+          "Interesting how Dr.Robertson had some unopened contact "
+          "lenses in his "
           "room. \n He must still stick to wearing his glasses... \n"
           "The testing tube is a bit of a giveaway I dont think I need to "
           "explain that.\n"
@@ -1015,7 +1027,10 @@ def bedroom():
             - Drops of Blood in sink
             - Killer in a rush
             - Who's Bedroom is that? Must be very tall""" not in notes:
-                notes.append("""- Notes about the bathroom/bedroom: "- Drops of Blood in sink - Killer in a rush - Who's Bedroom is that? Must be very tall""")
+                notes.append("- Notes about the bathroom/bedroom: "
+                             "- Drops of Blood in sink - "
+                             "Killer in a rush - Who's Bedroom is that? "
+                             "Must be very tall")
             print("Medicine cabnit looks empty, nice and clean... \n"
                   "\n"
                   "what is that?\n"
