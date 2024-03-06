@@ -34,7 +34,8 @@ def clues():
     print(Fore.GREEN + f"\nInventory : {inventory}\n")
     print(Fore.YELLOW + f"\nRiddle: {riddle}\n")
     print(Fore.CYAN + f"\nNotes: {notes}\n")
-    print("---\n"*60)
+    print("---"*60)
+    print("\n")
 
 
 # Main Menu / Start screen function
@@ -248,8 +249,50 @@ def instructions():
     """
     Instructions for the game
     """
-    print("""/n
-    """)
+    clear_screen()
+
+    while True:
+        print(
+              "- At the end of each scene, you will have the choice to\n"
+              "type where you would like to go next into the terminal. \n"
+              "You will be given two or three choices, Type whichever "
+              "room you\n"
+              " would like to visit next. \n"
+              "\n"
+              "- If you enter an invalid option you will get a prompt\n "
+              "that is red, saying invalid input. Wait 3 seconds, "
+              "the scene \n"
+              "will refresh and you can type in the correct input"
+              "\n"
+              "- You need to collect all 8 items to decide who you "
+              "believe \n"
+              "is the murderer. You will be told if you are correct or "
+              "wrong.\n"
+              "If you are wrong, you have to restart the game.\n"
+              "\n"
+              "- Along your journey you will be given plenty of clues \n"
+              "so keep an eye on everything that is said.\n"
+              "\n"
+              "- At the top of your screens you will have your "
+              "inventory bar, \n"
+              "your riddle bar (You will need to solve a riddle) \n"
+              "and your clues bar. These will be updated when you "
+              "aqquire them.\n"
+              "\n"
+              "- If at any point you want to quit the game just type "
+              "'quit' \n"
+              "in to the terminal.\n"
+              )
+        decision = input(Fore.BLUE +
+                         "\nType start game to start the game\n").lower()
+        if decision == "start game":
+            start_game()
+        elif decision == "quit":
+            quit()
+        else:
+            clear_screen()
+            print(Fore.RED + "invalid input - \nType start game\n")
+            time.sleep(3)
 
 
 # Main hall function
