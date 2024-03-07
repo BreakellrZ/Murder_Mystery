@@ -75,6 +75,9 @@ Technologies used in this website were as follows:
 ### Manual testing
 
 ### Validation
+I used Ci Python Linter by code institute to validate my code. At first I had a lot of errors which I will explain in the challenges/Bug fixes but I fixed them all and now I have no errors.
+
+![Python Linter](documentation/ci_python_linter.png)
 
 ## Challenges/Bug fixes
 
