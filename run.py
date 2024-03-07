@@ -173,7 +173,7 @@ def start_game():
               "and come to your conclusion of WHO MURDERED MR.HARDY.\n"
               )
 
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\n"
                          "Ok, time to explore this facility \n"
                          "and see what I can find.\n"
@@ -215,7 +215,7 @@ def common_room():
 
     while True:
         clues()
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\n"
                          "You made your way back to the Common Room. \n"
                          "Would you like to go to the Living room / \n"
@@ -284,7 +284,7 @@ def instructions():
               "'quit' \n"
               "in to the terminal.\n"
               )
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\nType start game to start the game\n").lower()
         if decision == "start game":
             start_game()
@@ -315,7 +315,7 @@ def main_hall():
               " at the body to see if I can find any clues \n"
               )
 
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "Should I search the body \n"
                          "or make my way up to the bedrooms upstairs?\n"
                          "(Type 'body' or 'bedroom')\n"
@@ -360,7 +360,7 @@ def main_hall():
                   )
 
             while True:
-                decision2 = input(Fore.BLUE +
+                decision2 = input(Fore.BLUE + Style.BRIGHT +
                                   "Would you like to make your way to \n"
                                   "the bedrooms upstairs, \n"
                                   "or back to the common room? \n"
@@ -423,7 +423,7 @@ def living_room():
               "so you can put away the murderer, \n"
               "bring peace back to Hallow Halls and to Mr.Hardys family.\n'"
               )
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\n"
                          "Do you want to ask Ms.Mengele about the suspects, \n"
                          "or go to Dr.Robertson's Room?\n"
@@ -475,7 +475,7 @@ def living_room():
                   )
 
             while True:
-                decision2 = input(Fore.BLUE +
+                decision2 = input(Fore.BLUE + Style.BRIGHT +
                                   "Go to Alice and Joshs room or back \n"
                                   "to common room \n"
                                   "(Type Alice and josh or common room) \n"
@@ -546,7 +546,7 @@ def alice_josh():
               "A straight edge society badge.\n"
               "Hmm, that is conflicting from what I have heard. \n"
               )
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "Let's go back to the common room to re-asses \n"
                          "Type common room) \n"
                          ).lower()
@@ -605,7 +605,7 @@ def dr_robertson():
               "With the right combination, I may unlock your soul.\n"
               "What am I?' \n"
               )
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "Mabye I should go to the testing labs, \n"
                          "mabye there is something there that this \n"
                          "riddle can solve?\n "
@@ -657,7 +657,7 @@ def testing_labs():
               "you need that special key Dr.Robertson has\n"
               )
 
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\nDo you want to look at the safe or go "
                          "to the suspects?\n"
                          "(Type Safe or Suspects room)\n"
@@ -671,7 +671,7 @@ def testing_labs():
                   "a word.\n")
 
             while True:
-                decision2 = input(Fore.BLUE +
+                decision2 = input(Fore.BLUE + Style.BRIGHT +
                                   "\nInput the word you think is needed to \n"
                                   "open the safe\n"
                                   ).lower()
@@ -715,7 +715,8 @@ def testing_labs():
                                          "Spare Key card")
 
                     while True:
-                        decision3 = input(Fore.BLUE + "\nWOW THIS IS VERY "
+                        decision3 = input(Fore.BLUE + Style.BRIGHT +
+                                          "\nWOW THIS IS VERY "
                                           "IMPORTANT -\n"
                                           "Lots of clues in that diary.\n"
                                           "hmm ... \n"
@@ -754,7 +755,7 @@ def testing_labs():
                               "looks like I got it wrong, \n"
                               "mabye I can find a clue for this somewhere\n"
                               )
-                        wrong = input(Fore.BLUE +
+                        wrong = input(Fore.BLUE + Style.BRIGHT +
                                       "\nType common room to go back "
                                       "and search for more clues\n"
                                       ).lower()
@@ -801,7 +802,7 @@ def suspects():
                   "enough yet,\n"
                   " lets come back later when we have more clues found \n"
                   "(You Need all 8 items to enter) \n")
-            decision = input(Fore.BLUE +
+            decision = input(Fore.BLUE + Style.BRIGHT +
                              "\nType common room "
                              "to continue search for clues\n"
                              ).lower()
@@ -838,7 +839,7 @@ def suspects():
                   "All four suspects look heavily sedated and dazed... \n"
                   "as expected... \n"
                   )
-            decision2 = input(Fore.BLUE +
+            decision2 = input(Fore.BLUE + Style.BRIGHT +
                               "\nIt is time for you to choose "
                               "WHO WAS THE MURDERER??!!\n"
                               ).lower()
@@ -1047,13 +1048,14 @@ def winner():
           "........................................................."
           "......... \n"
           "\n"
-          "CONGRATULATIONS YOU HAVE SOLVED THE HALLOW HALLS MURDER MYSTERY \n"
-          "WELL DONE !! \n"
-          "GAME OVER. \n"
           )
+    print(Fore.GREEN + "CONGRATULATIONS YOU HAVE SOLVED "
+          "THE HALLOW HALLS MURDER MYSTERY \n"
+          "WELL DONE !! \n"
+          "GAME OVER. \n")
 
     while True:
-        ending = input(Fore.BLUE +
+        ending = input(Fore.BLUE + Style.BRIGHT +
                        "Type quit to quit the game \n"
                        )
         if ending == "quit":
@@ -1073,7 +1075,7 @@ def loser():
               "try again next time... \n"
               "YOU JUST SENT AN INNOCENT PERSON TO PRISON HOW COULD YOU!!\n"
               )
-        ending = input(Fore.BLUE +
+        ending = input(Fore.BLUE + Style.BRIGHT +
                        "Type restart to restart the game\n"
                        ).lower()
 
@@ -1120,7 +1122,7 @@ def bedroom():
               "The murderer must be very tall to reach up there.\n"
               )
 
-        decision = input(Fore.BLUE +
+        decision = input(Fore.BLUE + Style.BRIGHT +
                          "\nThe bathroom door seems to be open \n"
                          "in this bedroom, "
                          "Do you want to have a look in there 2 \n"
@@ -1160,7 +1162,7 @@ def bedroom():
                   )
 
             while True:
-                home = input(Fore.BLUE +
+                home = input(Fore.BLUE + Style.BRIGHT +
                              "\nTime to make my way back to the Common Room "
                              "(Type Common Room to get there) \n"
                              ).lower()
