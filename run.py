@@ -283,6 +283,9 @@ def instructions():
               "- If at any point you want to quit the game just type \n"
               "'quit' \n"
               "in to the terminal.\n"
+              "\n"
+              "I recommend playing some Detective music in the background\n"
+              "\n"
               )
         decision = input(Fore.BLUE + Style.BRIGHT +
                          "\nType start game to start the game\n").lower()
