@@ -1,32 +1,36 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hallow Halls Murder Mystery Game
 
-Welcome,
+![Hallow Halls ascii art](documentation/hallow_halls.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+- Hallow Halls is a murder mystery game. The game is set at a very wealthy private pyschiatric Hospital called Hallow Halls. The aim of the game is to find out who was the murderer.
+As you play the game, you will come across new clues, and items that will help you figure out who is the killer. You will be choosing which room you want to explore next by typing the room into the terminal provided. Some rooms will contain items that will be added to your inventory. You will need all 8 items before guessing who you think is the murderer. Read every detail carefully as it may or may not be very important to solve the case... you might even have to solve a little riddle along the way. 
 
-## Reminders
+The live link can be found here - [Link to live project here](https://murder-mystery-pp3-a34ca40ad052.herokuapp.com/)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## Goals of this project
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Site owner goals
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- To make a fun easy-to-playy game for the user.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- To make the user feel like they are in a murder mystery game.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- To provide an easy-to-navigate game.
 
-Connect your GitHub repository and deploy as normal.
+- To challenge the users and not make the game to easy to solve.
 
-## Constraints
+- For the user to get immersed into the Hallow Halls experience.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### External user goals
 
----
+- To enjoy a murder mystery game.
 
-Happy coding!
+- To escape normality and immerse yourself into another reality.
+
+- To solve a riddle, memorize clues and to crack the murder case.
+
+
+
+
+
