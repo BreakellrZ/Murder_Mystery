@@ -3,7 +3,7 @@
 ![Hallow Halls ascii art](documentation/hallow_halls.png)
 
 - Hallow Halls is a murder mystery game. The game is set at a very wealthy private pyschiatric Hospital called Hallow Halls. The aim of the game is to find out who was the murderer.
-As you play the game, you will come across new clues, and items that will help you figure out who is the killer. You will be choosing which room you want to explore next by typing the room into the terminal provided. Some rooms will contain items that will be added to your inventory. You will need all 8 items before guessing who you think is the murderer. Read every detail carefully as it may or may not be very important to solve the case... you might even have to solve a little riddle along the way. I recommend users to play some sort of detective music in the background while playing the game.
+As you play the game, you will come across new clues and items that will help you figure out who is the killer. You will be choosing which room you want to explore next by typing the room into the terminal provided. Some rooms will contain items that will be added to your inventory. You will need all 8 items before guessing who you think is the murderer. Read every detail carefully as it may or may not be very important to solve the case... you might even have to solve a little riddle along the way. I recommend users to play some sort of detective music in the background while playing the game.
 
 The live link can be found here - [Link to live project here](https://murder-mystery-pp3-a34ca40ad052.herokuapp.com/)
 
@@ -155,6 +155,26 @@ Technologies used in this website were as follows:
 ## Testing and Validation
 
 ### Manual testing
+
+I manually tested every scenario possible inside this game. I checked to see if "Invalid input" messages poped up everytime a user inputs an invalid input. Player feedback is very important if they do something wrong, I made sure Players know exactly what they need to type in-to the terminal at all times. I made sure all features were working as they should, and all functions were running smoothly and correctly. 
+
+|Test scenario|Player's steps/input|What should happen|Outcome|
+|-------------|------------------|-----------|-------|
+||||| 
+|Typing 1 to start game|On the main menu, press 1 to start game|After pressing 1 the game should start and show "Enter your surname"|Works as expected|
+|Typing 2 to view insturctions|On the main menu, press 2 to view instructions|Game should bring up the insturctions of the game|Works as intended|
+|Typing 3 on the main menu should quit the game|Type 3 into termianl|Game should quit|Works as expected|
+|Testing to see if when Player puts in their Surname that the game shows their surname after 'Hello Detective.'|Player needs to type in their surname to the terminal|The game should use the players surname as the detectives name in the game|Works as expected|
+|Testing to see if the user types in the correct input it takes them to the room they inputed(Testing every single room input)|Player needs to type the correct room into the terminal to go there|When the user types in the correct room, for example 'Main hall' the game should bring the player to the main hall|All inputs Work as expeccted and bring the player to the correct room|
+|Testing for when a player enters a certain room that has an item, riddle or clues, when they enter the next room the item, riddle, or clue will be added to their inventory, riddle, or clues lists|Players just have to enter a certain room|The item will be added automatically either in the room where the item is or when they go to the next room|Works as expected|
+|Testing to see if the correct riddle input works as expected|Player has to enter Piano as the correct answer to the riddle|A print statement shows with what was found inside the safe|Works as expected|
+|Testing to see if the wrong riddle input works as expected|Player has to put in the wrong answer to the riddle|A print statement saying to the player that they got the riddle wrong|Works as expected|
+|Testing to see if the player inputs "quit" on any scene in the game that the game will end|Player has to input "quit" into the terminal|The game should end|Works as expected|
+|Testing to see if the player enters the wrong input into the terminal that the game shows an "Invalid input" prompt for all invalid inputs|Player has to put in the wrong input|A message should pop up for 3 seconds saying "Invalid input please type in..." in the color red. After 3 seconds the message will stay at the top of the screen and that scene will refresh and show again, allowing the player to input the correct statement this time|Works as expected|
+|Testing to see if the player solves the case and puts in the correct name into the terminal that the game runs the winner function|Player has to guess the correct murderer|The winner function should run|Works as expected|
+|Testing to see if the player does not solves the case and puts in the incorrect name into the terminal that the game runs the loser function|Player has to enter the wrong murderer|The loser function should run|Works as expected|
+
+
 
 ### Validation
 I used Ci Python Linter by code institute to validate my code. At first I had a lot of errors which I will explain in the challenges/Bug fixes but I fixed them all and now I have no errors.

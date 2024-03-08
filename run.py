@@ -1164,7 +1164,8 @@ def bedroom():
 
             while True:
                 home = input(Fore.BLUE + Style.BRIGHT +
-                             "\nTime to make my way back to the Common Room "
+                             "\nTime to make my way back "
+                             "to the Common Room \n"
                              "(Type Common Room to get there) \n"
                              ).lower()
 
