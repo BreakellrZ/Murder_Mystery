@@ -23,9 +23,6 @@ def clear_screen():
     print("\033c", end="")
 
 
-clear_screen()
-
-
 # Clues
 def clues():
     """
@@ -1197,4 +1194,5 @@ def bedroom():
 
 
 # Calling Functions
+clear_screen()
 main_menu()
