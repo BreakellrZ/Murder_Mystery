@@ -109,6 +109,13 @@ If the player solved the case, they will get a long message explaining why they 
 ![Congratulations message](documentation/congratulations_message.png)
 ![Unlcuky message](documentation/wrong_message.png)
 
+### Colorama, OS, and Time Modules used
+- I used Colorama to change the color of certain text, I also used it to brighten the text up.
+- The os module was used to clear the screen for each new function/after a user input.
+This was to give it the feeling that a new scene was happening after each users decision.
+- I used the Time module so that "Invalid input" would be displayed to the player if they inputed wrong. After 3 seconds the page they were on would refresh and they will get anther chance to re-enter the correct input this time.
+![Modules imported](documentation/modules.png)
+
 ### Quit feature
 Lastly there is a quit feature. Explained in the instructions - If a player ever wants to quit the game they just type quit into the terminal and the game will end.
 
@@ -143,6 +150,25 @@ I used Ci Python Linter by code institute to validate my code. At first I had a 
 ## Challenges/Bug fixes
 
 ## Deployment
+## Deployment to Heroku
+It was my first time using Heroku these are the steps used to deploy my project.
+
+- Log into Heroku or create an account if you don't already have one.
+- Click 'New' from the top right of the screen.
+- Select 'Create new app'.
+- Enter a unique application name(murder-mystery-pp3) - select appropriate region.
+- Click 'Create app'
+- One the following page, click the 'Settings' tab and scroll to Config Vars.
+- In the KEY input field, enter 'PORT' and in the VALUE input field, enter '8000'.
+- Click 'Add'.
+- On the same page, scroll down to buildpacks and add two buildpacks.
+- The ordering for these is heroku/python followed by heroku/nodejs.
+- At the top of the page, click 'Deploy'.
+- Select Github as the deployment method.
+- Search for and select correct repository(murder-mystery-pp3), then click 'Connect'.
+- At the bottom of the same page, select either Automatic Deployment or Manual Deployment 
+- Wait for your site to be deployed and then you can view it.
+
 
 ## Credit
 

@@ -1,3 +1,4 @@
+# Imported Modules
 import os
 import time
 import colorama
@@ -10,7 +11,7 @@ inventory = []
 # Inventory for riddle notes picked up in the game
 riddle = []
 
-# notes
+# notes/clues picked up from in the game
 notes = []
 
 
@@ -23,7 +24,7 @@ def clear_screen():
     print("\033c", end="")
 
 
-# Clues
+# Clues function that will show inventory, riddle, and notes lists
 def clues():
     """
     clues that will be shown at the top of the screen each scene
