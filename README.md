@@ -163,6 +163,23 @@ I used Ci Python Linter by code institute to validate my code. At first I had a 
 
 ## Challenges/Bug fixes
 
+I had a few bugs and challenges during the process of making this project.
+
+ - The first bug was how bad the print statements looked on the heroku terminal. I was using doc strings for all my print and input statements but I learned the hard way that this was not the best way to go about writing my print statements. The structure looked wonky when deployed on the terminal. Text was not starting at the left hand side of the screen. I had to change all print statements from doc strings to normal strings and I had to add '\n' to the end of all sentences and lines to make it look better in the terminal. This took some time and was tedious but worth it.
+
+ [doc strings for print statements](documentation/doc_strings.png)
+
+ [normal strings for print statements](documentation/print_statements.png)
+
+ - When I first used the CI python Linter I had a lot of errors/bugs. One of these was that a lot of my closing brackets did not match visual indentation. This was fixed by making sure all closing tags where lined up properly with the right indentation.
+
+ [Closing tags indentation bug](documentation/ci_python_linter_bug.png)
+
+ - From the CI Python Linter, I also had some 'lines that were too long'. I fixed this by using a ruler in my workspace - applied via file - preferences - settings - rulers. So whenever text went past my vertical ruler line - I knew the line was too long and I had to move some of the text to the next line. Also there was some 'trailing whitespaces' which I just got rid off by using the backspace button.
+
+ [Lines were too long bug](documentation/linter_python_2.png)
+
+
 ## Deployment
 It was my first time using Heroku these are the steps used to deploy my project.
 
