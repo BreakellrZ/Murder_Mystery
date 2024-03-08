@@ -8,6 +8,19 @@ As you play the game, you will come across new clues and items that will help yo
 The live link can be found here - [Link to live project here](https://murder-mystery-pp3-a34ca40ad052.herokuapp.com/)
 
 
+## Table of Contents
+- [Project Goals](#Goals-of-this-project)
+- [Design of the project](#Design-of-the-project)
+- [Features Used](#Features-used)
+- [Technology used](#Technology-used)
+- [Testing and Vlidation](Testing-and-validation)
+- [Manual testing](Manual_testing)
+- [Validation](Validation)
+- [Challenges and bug Fixes](Challenges/Bug-fixes)
+- [Deployment](Deployment)
+- [Credits](#credits)
+
+
 ## Goals of this project
 
 ### Site owner goals
@@ -165,7 +178,7 @@ I manually tested every scenario possible inside this game. I checked to see if 
 |Typing 2 to view insturctions|On the main menu, press 2 to view instructions|Game should bring up the insturctions of the game|Works as intended|
 |Typing 3 on the main menu should quit the game|Type 3 into termianl|Game should quit|Works as expected|
 |Testing to see if when Player puts in their Surname that the game shows their surname after 'Hello Detective.'|Player needs to type in their surname to the terminal|The game should use the players surname as the detectives name in the game|Works as expected|
-|Testing to see if the user types in the correct input it takes them to the room they inputed(Testing every single room input)|Player needs to type the correct room into the terminal to go there|When the user types in the correct room, for example 'Main hall' the game should bring the player to the main hall|All inputs Work as expeccted and bring the player to the correct room|
+|Testing to see if the user types in the correct input it takes them to the room they inputed(Testing every single room input)|Player needs to type the correct room into the terminal to go there|When the user types in the correct room, for example 'Main hall' the game should bring the player to the main hall|Works as expected|
 |Testing for when a player enters a certain room that has an item, riddle or clues, when they enter the next room the item, riddle, or clue will be added to their inventory, riddle, or clues lists|Players just have to enter a certain room|The item will be added automatically either in the room where the item is or when they go to the next room|Works as expected|
 |Testing to see if the correct riddle input works as expected|Player has to enter Piano as the correct answer to the riddle|A print statement shows with what was found inside the safe|Works as expected|
 |Testing to see if the wrong riddle input works as expected|Player has to put in the wrong answer to the riddle|A print statement saying to the player that they got the riddle wrong|Works as expected|
