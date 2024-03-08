@@ -160,13 +160,13 @@ def start_game():
               "\n"
               "Now, "
               "unfortunatly Dr.Robertson is away on Holiday for the \n"
-              "past week,"
-              " but he is back tomorrow.\n"
+              "past week, "
+              "but he is back tomorrow.\n"
               "This will give you a lot of time \n"
               "to be able to put the pieces together, \n"
               "and hopefully solve this brutal Murder.\n"
               "You are free to move around Hallow Halls as much as you like \n"
-              " to gather evidence, \n"
+              "to gather evidence, \n"
               "and come to your conclusion of WHO MURDERED MR.HARDY.\n"
               )
 
@@ -1050,7 +1050,7 @@ def winner():
           "\n"
           )
     print(Fore.GREEN + "CONGRATULATIONS YOU HAVE SOLVED "
-          "THE HALLOW HALLS MURDER MYSTERY \n"
+          "THE HALLOW HALLS MURDER\n MYSTERY "
           "WELL DONE !! \n"
           "GAME OVER. \n")
 
