@@ -2,7 +2,7 @@
 
 ![Hallow Halls ascii art](documentation/hallow_halls.png)
 
-- Hallow Halls is a murder mystery game. The game is set at a very wealthy private pyschiatric Hospital called Hallow Halls. The aim of the game is to find out who was the murderer.
+- Hallow Halls is a murder mystery game. The game is set at a very wealthy private psychiatric Hospital called Hallow Halls. The aim of the game is to find out who was the murderer.
 As you play the game, you will come across new clues and items that will help you figure out who is the killer. You will be choosing which room you want to explore next by typing the room into the terminal provided. Some rooms will contain items that will be added to your inventory. You will need all 8 items before guessing who you think is the murderer. Read every detail carefully as it may or may not be very important to solve the case... you might even have to solve a little riddle along the way. I recommend users to play some sort of detective music in the background while playing the game.
 
 The live link can be found here - [Link to live project here](https://murder-mystery-pp3-a34ca40ad052.herokuapp.com/)
@@ -31,7 +31,7 @@ The live link can be found here - [Link to live project here](https://murder-mys
 
 - To provide an easy-to-navigate game.
 
-- To challenge the users and not make the game to easy to solve.
+- To challenge the users and not make the game too easy to solve.
 
 - For the user to get immersed into the Hallow Halls experience.
 
@@ -41,13 +41,13 @@ The live link can be found here - [Link to live project here](https://murder-mys
 
 - To escape normality and immerse yourself into another reality.
 
-- To solve a riddle, memorize clues and to crack the murder case.
+- To solve a riddle, memorize clues and crack the murder case.
 
 ## Design of the project
 
 ### Strategy
 
-My overall strategy was to make a fun, challenging murder mystery for the users to play with some twists and to get the user really thinking about who the murdere could be.
+My overall strategy was to make a fun, challenging murder mystery for the users to play with some twists and to get the user really thinking about who the murderer could be.
 
 - The game was aimed at mainly ages that are 12+ as it does involve a murder and some complexity.
 
@@ -57,7 +57,7 @@ My overall strategy was to make a fun, challenging murder mystery for the users 
 
 ### Structure
 
-The structure of the game is very simple. At the top of each scene the user will have their inventory, riddle, and clues section with colors of green, yellow and cyan. Then below that, will be the main story being printed out for the users to see the story and what is being said in bright white text. Then at the bottom there will be a paragraph which will explain to them which room they have a choice of going into next which will be in blue.
+The structure of the game is very simple. At the top of each scene, the user will have their inventory, riddle, and clues section with colors of green, yellow and cyan. Then below that, will be the main story being printed out for the users to see the story and what is being said in bright white text. Then at the bottom, there will be a paragraph that will explain to them which room they have a choice of going into next which will be in blue.
 
 ### Surface
 
@@ -71,7 +71,7 @@ Before I get into the main features of the game - I would like to mention the us
 ![Flow-chart ](documentation/flow_chart.png)
 
 ### Ascii Art
-The first feature users see when loading up the game is the Ascii Art. I used an Ascii Art Achive which I mention in my credits section. This feature gives users a good feel into what the game will be about, with its bloody look. It really sets the scene and theme of the game.
+The first feature users see when loading up the game is the Ascii Art. I used an Ascii Art Achive which I mention in my credits section. This feature gives users a good feel for what the game will be about, with its bloody look. It really sets the scene and theme of the game.
 
 ![Ascii Art](documentation/hallow_halls.png)
 
@@ -85,9 +85,9 @@ Here it will just be the instructions of the game outlined very easily!
 
 ![Instructions of the game](documentation/instructions.png)
 
-### Enter your surname for your dectective name feature
+### Enter your surname for your detective name feature
 Once the players start the game, they will be given an input to enter your surname.
-This is so when the start_game function runs an f-string will be used to show the player their surname on the screen. It will be dispalyed as Hello Detective."Surname entered". This makes the game feel more personal and that you are really the detective.
+This is so when the start_game function runs an f-string will be used to show the player their surname on the screen. It will be displayed as Hello Detective."Surname entered". This makes the game feel more personal and that they are really the detective.
 
 ![Enter surname feature](documentation/surname.png)
 ![dectective name](documentation/dectective_name.png)
@@ -169,7 +169,7 @@ Technologies used in this website were as follows:
 
 ### Manual testing
 
-I manually tested every scenario possible inside this game. I checked to see if "Invalid input" messages poped up everytime a user inputs an invalid input. Player feedback is very important if they do something wrong, I made sure Players know exactly what they need to type in-to the terminal at all times. I made sure all features were working as they should, and all functions were running smoothly and correctly. 
+I manually tested every scenario possible inside this game. I checked to see if "Invalid input" messages popped up everytime a user inputs an invalid input. Player feedback is very important if they do something wrong, I made sure Players know exactly what they need to type in-to the terminal at all times. I made sure all features were working as they should, and all functions were running smoothly and correctly. 
 
 |Test scenario|Player's steps/input|What should happen|Outcome|
 |-------------|------------------|-----------|-------|
@@ -177,15 +177,15 @@ I manually tested every scenario possible inside this game. I checked to see if 
 |Typing 1 to start game|On the main menu, press 1 to start game|After pressing 1 the game should start and show "Enter your surname"|Works as expected|
 |Typing 2 to view insturctions|On the main menu, press 2 to view instructions|Game should bring up the insturctions of the game|Works as intended|
 |Typing 3 on the main menu should quit the game|Type 3 into termianl|Game should quit|Works as expected|
-|Testing to see if when Player puts in their Surname that the game shows their surname after 'Hello Detective.'|Player needs to type in their surname to the terminal|The game should use the players surname as the detectives name in the game|Works as expected|
-|Testing to see if the user types in the correct input it takes them to the room they inputed(Testing every single room input)|Player needs to type the correct room into the terminal to go there|When the user types in the correct room, for example 'Main hall' the game should bring the player to the main hall|Works as expected|
-|Testing for when a player enters a certain room that has an item, riddle or clues, when they enter the next room the item, riddle, or clue will be added to their inventory, riddle, or clues lists|Players just have to enter a certain room|The item will be added automatically either in the room where the item is or when they go to the next room|Works as expected|
-|Testing to see if the correct riddle input works as expected|Player has to enter Piano as the correct answer to the riddle|A print statement shows with what was found inside the safe|Works as expected|
-|Testing to see if the wrong riddle input works as expected|Player has to put in the wrong answer to the riddle|A print statement saying to the player that they got the riddle wrong|Works as expected|
-|Testing to see if the player inputs "quit" on any scene in the game that the game will end|Player has to input "quit" into the terminal|The game should end|Works as expected|
-|Testing to see if the player enters the wrong input into the terminal that the game shows an "Invalid input" prompt for all invalid inputs|Player has to put in the wrong input|A message should pop up for 3 seconds saying "Invalid input please type in..." in the color red. After 3 seconds the message will stay at the top of the screen and that scene will refresh and show again, allowing the player to input the correct statement this time|Works as expected|
-|Testing to see if the player solves the case and puts in the correct name into the terminal that the game runs the winner function|Player has to guess the correct murderer|The winner function should run|Works as expected|
-|Testing to see if the player does not solves the case and puts in the incorrect name into the terminal that the game runs the loser function|Player has to enter the wrong murderer|The loser function should run|Works as expected|
+|Testing to see if when the Player puts in their Surname that the game shows their surname after 'Hello Detective.'|Player needs to type in their surname to the terminal|The game should use the players surname as the detectives name in the game|Works as expected|
+|Testing to see if the user types in the correct input it takes them to the room they inputed(Testing every single room input)|The Player needs to type the correct room into the terminal to go there|When the player types in the correct room, for example 'Main hall' the game should bring the player to the main hall|Works as expected|
+|Testing for when the player enters a certain room that has an item, riddle or clues, when they enter the next room the item, riddle, or clue will be added to their inventory, riddle, or clues lists|The Players just have to enter a certain room|The item will be added automatically either in the room where the item is or when they go to the next room|Works as expected|
+|Testing to see if the correct riddle input works as expected|The Player has to enter Piano as the correct answer to the riddle|A print statement shows with what was found inside the safe|Works as expected|
+|Testing to see if the wrong riddle input works as expected|The Player has to put in the wrong answer to the riddle|A print statement saying to the player that they got the riddle wrong|Works as expected|
+|Testing to see if the player inputs "quit" on any scene in the game that the game will end|The Player has to input "quit" into the terminal|The game should end|Works as expected|
+|Testing to see if the player enters the wrong input into the terminal that the game shows an "Invalid input" prompt for all invalid inputs|The Player has to put in the wrong input|A message should pop up for 3 seconds saying "Invalid input please type in..." in the color red. After 3 seconds the message will stay at the top of the screen and that scene will refresh and show again, allowing the player to input the correct statement this time|Works as expected|
+|Testing to see if the player solves the case and puts in the correct name into the terminal that the game runs the winner function|The Player has to guess the correct murderer|The winner function should run|Works as expected|
+|Testing to see if the player does not solve the case and puts in the incorrect name into the terminal that the game runs the loser function|The Player has to enter the wrong murderer|The loser function should run|Works as expected|
 
 
 
@@ -237,7 +237,7 @@ It was my first time using Heroku these are the steps used to deploy my project.
 
 - I would first like to thank my Code Institute mentor, Brian O'Hare, for guiding me, providing tips such as adding the time module, and os module, plus giving me feedback during this project he was a great help.
 
-- I would like to credit Code Institute. Their challenges and mock project heloed me learn the fundamentals of Python.
+- I would like to credit Code Institute. Their challenges and mock project helped me learn the fundamentals of Python.
 
 - I would like to credit [Lucidchart](https://www.lucidchart.com/pages/landing/uml-diagram-software?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_desktop_search_strategic_dsa_) for providing a free to use service, I was able to design my FlowChart from this website.
 
