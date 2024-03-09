@@ -87,6 +87,7 @@ def main_menu():
             instructions()
             break
         elif start == "3":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -191,6 +192,7 @@ def start_game():
             testing_labs()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -232,6 +234,7 @@ def common_room():
             testing_labs()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -291,6 +294,7 @@ def instructions():
         if decision == "start game":
             start_game()
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -376,6 +380,7 @@ def main_hall():
                     common_room()
                     break
                 elif decision2 == "quit":
+                    clear_screen()
                     quit()
                 else:
                     clear_screen()
@@ -389,6 +394,7 @@ def main_hall():
             bedroom()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -490,6 +496,7 @@ def living_room():
                     common_room()
                     break
                 elif decision2 == "quit":
+                    clear_screen()
                     quit()
                 else:
                     clear_screen()
@@ -503,6 +510,7 @@ def living_room():
             dr_robertson()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -557,6 +565,7 @@ def alice_josh():
             common_room()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -621,6 +630,7 @@ def dr_robertson():
             common_room()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -741,6 +751,7 @@ def testing_labs():
                             common_room()
                             break
                         elif decision3 == "quit":
+                            clear_screen()
                             quit()
                         else:
                             clear_screen()
@@ -749,6 +760,7 @@ def testing_labs():
                         time.sleep(3)
                         clues()
                 elif decision2 == "quit":
+                    clear_screen()
                     quit()
                 else:
 
@@ -766,6 +778,7 @@ def testing_labs():
                             common_room()
                             break
                         elif wrong == "quit":
+                            clear_screen()
                             quit()
                         else:
                             clear_screen()
@@ -779,6 +792,7 @@ def testing_labs():
             suspects()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -813,6 +827,7 @@ def suspects():
                 common_room()
                 break
             elif decision == "quit":
+                clear_screen()
                 quit()
             else:
                 clear_screen()
@@ -1062,6 +1077,7 @@ def winner():
                        "Type quit to quit the game \n"
                        )
         if ending == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -1087,6 +1103,7 @@ def loser():
             main_menu()
             break
         elif ending == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
@@ -1175,6 +1192,7 @@ def bedroom():
                     common_room()
                     break
                 elif home == "quit":
+                    clear_screen()
                     quit()
                 else:
                     clear_screen()
@@ -1188,6 +1206,7 @@ def bedroom():
             common_room()
             break
         elif decision == "quit":
+            clear_screen()
             quit()
         else:
             clear_screen()
