@@ -312,8 +312,8 @@ def main_hall():
               "The body is at the bottom of the stairs..\n"
               "It looks like somebody may have pushed the victim \n"
               "down the stairs?\n"
-              " Mabye I should take a closer look\n"
-              " at the body to see if I can find any clues \n"
+              "Mabye I should take a closer look\n"
+              "at the body to see if I can find any clues \n"
               )
 
         decision = input(Fore.BLUE + Style.BRIGHT +
@@ -549,7 +549,7 @@ def alice_josh():
               )
         decision = input(Fore.BLUE + Style.BRIGHT +
                          "Let's go back to the common room to re-asses \n"
-                         "Type common room) \n"
+                         "(Type common room) \n"
                          ).lower()
 
         if decision == "common room":
@@ -609,7 +609,7 @@ def dr_robertson():
         decision = input(Fore.BLUE + Style.BRIGHT +
                          "Mabye I should go to the testing labs, \n"
                          "mabye there is something there that this \n"
-                         "riddle can solve?\n "
+                         "riddle can solve?\n"
                          "(Type Testing labs or common room)\n"
                          ).lower()
 
@@ -674,7 +674,7 @@ def testing_labs():
             while True:
                 decision2 = input(Fore.BLUE + Style.BRIGHT +
                                   "\nInput the word you think is needed to \n"
-                                  "open the safe\n"
+                                  "open the safe!!\n"
                                   ).lower()
 
                 if decision2 == "piano":
@@ -1051,8 +1051,9 @@ def winner():
           "\n"
           )
     print(Fore.GREEN + "CONGRATULATIONS YOU HAVE SOLVED "
-          "THE HALLOW HALLS MURDER\n MYSTERY "
+          "THE HALLOW HALLS MURDER\nMYSTERY "
           "WELL DONE !! \n"
+          "\n"
           "GAME OVER. \n")
 
     while True:
@@ -1128,8 +1129,8 @@ def bedroom():
                          "in this bedroom, "
                          "Do you want to have a look in there 2 \n"
                          "or do you want to make your way "
-                         "back to the common room?\n "
-                         "(Bathroom / Common Room) \n"
+                         "back to the common room?\n"
+                         "Type (Bathroom / Common Room) \n"
                          ).lower()
 
         if decision == "bathroom":
