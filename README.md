@@ -147,6 +147,12 @@ This was to give it the feeling that a new scene was happening after each users 
 ### Quit feature
 Lastly there is a quit feature. Explained in the instructions - If a player ever wants to quit the game they just type quit into the terminal and the game will end.
 
+## Future Features
+
+- I would like to add more puzzles, and riddles to the game. The puzzles/riddles would unlock the items needed to solve the case. For each item the Player would have to solve a puzzle or a ridde to aqquire each item that is needed.
+
+- I would like to add more Ascii art for each scene to give the players some imagery to look at for each room.
+
 
 ## Technologies used
 
