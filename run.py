@@ -93,6 +93,7 @@ def main_menu():
             print(Fore.RED + "Invalid input -\n"
                   "You must enter 1 to start the game "
                   "or 2 to view instuctions\n")
+            time.sleep(3)
 
 
 # Start Game Function
