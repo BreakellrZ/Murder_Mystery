@@ -17,7 +17,7 @@ The live link can be found here - [Link to live project here](https://murder-mys
 - [Testing and Vlidation](#Testing-and-Validation)
 - [Manual testing](#Manual-testing)
 - [Validation](#Validation)
-- [Challenges and bug Fixes](#Challenges/Bug-fixes)
+- [Challenges and bug Fixes](#Challenges-and-Bug-fixes)
 - [Deployment](#Deployment)
 - [Credits](#credits)
 
@@ -202,7 +202,7 @@ I used Ci Python Linter by code institute to validate my code. At first I had a 
 
 ![Python Linter](documentation/ci_python_linter.png)
 
-## Challenges/Bug fixes
+## Challenges and Bug fixes
 
 I had a few bugs and challenges during the process of making this project.
 
