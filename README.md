@@ -12,12 +12,12 @@ The live link can be found here - [Link to live project here](https://murder-mys
 - [Project Goals](#Goals-of-this-project)
 - [Design of the project](#Design-of-the-project)
 - [Features Used](#Features-used)
-- [Technology used](#Technology-used)
-- [Testing and Vlidation](Testing-and-validation)
-- [Manual testing](Manual_testing)
-- [Validation](Validation)
-- [Challenges and bug Fixes](Challenges/Bug-fixes)
-- [Deployment](Deployment)
+- [Technology used](#Technologies-used)
+- [Testing and Vlidation](#Testing-and-Validation)
+- [Manual testing](#Manual-testing)
+- [Validation](#Validation)
+- [Challenges and bug Fixes](#Challenges/Bug-fixes)
+- [Deployment](#Deployment)
 - [Credits](#credits)
 
 
@@ -233,7 +233,7 @@ It was my first time using Heroku these are the steps used to deploy my project.
 - Wait for your site to be deployed and then you can view it.
 
 
-## Credit
+## Credits
 
 - I would first like to thank my Code Institute mentor, Brian O'Hare, for guiding me, providing tips such as adding the time module, and os module, plus giving me feedback during this project he was a great help.
 
