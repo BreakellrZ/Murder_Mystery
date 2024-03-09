@@ -12,6 +12,7 @@ The live link can be found here - [Link to live project here](https://murder-mys
 - [Project Goals](#Goals-of-this-project)
 - [Design of the project](#Design-of-the-project)
 - [Features Used](#Features-used)
+- [Future Features](#Future-Features)
 - [Technology used](#Technologies-used)
 - [Testing and Vlidation](#Testing-and-Validation)
 - [Manual testing](#Manual-testing)
